@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:luna="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna"
+                    xmlns:models="clr-namespace:WDG.Wallet.Win.Models">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Converters.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="tradeRecordBorderStyle" TargetType="Border">
+        <Setter Property="MinWidth" Value="400"/>
+        <Setter Property="MaxWidth" Value="920"/>
+        <Setter Property="Height" Value="100"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#F1F7FF"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="0 0 0 20"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect x:Name="OG" BlurRadius="20" Color="#1B76FF" Opacity="0.1">
+                    <Storyboard.TargetProperty>
+                        BlurRadius
+                    </Storyboard.TargetProperty>
+                </DropShadowEffect>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <DataTemplate x:Key="TradeRecordInfoTemplate" DataType="{x:Type models:TradeRecordInfo}">
+        <Border Style="{StaticResource tradeRecordBorderStyle}">
+            <Canvas>
+                <Image x:Name="image" Source="../../images/page/receipt.png" Canvas.Left="30" Canvas.Top="22" Width="30" Height="30"/>
+
+                <TextBlock Text="{Binding Payment.Time,Converter={StaticResource _timestampToDateTimeConverter},ConverterParameter='yyyy-MM-dd HH:mm:ss'}" Canvas.Left="75" Canvas.Top="22"/>
+
+                <TextBlock Text="{Binding Payment,Converter={StaticResource _paymentToMarkConverter}}" Canvas.Left="75" Canvas.Top="47"/>
+
+                <StackPanel x:Name="panel" Orientation="Horizontal" Canvas.Top="22" Canvas.Right="30" HorizontalAlignment="Right">
+                    <TextBlock x:Name="tb_model" Text="+ " Visibility="Collapsed"/>
+                    <TextBlock Text="{Binding Payment,Converter={StaticResource _paymentToTradeAmountConverter}}"/>
+                    <TextBlock Text=" WDG"/>
+                </StackPanel>
+            </Canvas>
+        </Border>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Payment.Category}" Value="self">
+                <Setter TargetName="image" Property="Source" Value="../../images/page/pay.png"/>
+                <Setter TargetName="tb_model" Property="Text" Value="- "/>
+                <Setter TargetName="panel" Property="TextElement.Foreground" Value="Red"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Payment.Category}" Value="send">
+                <Setter TargetName="image" Property="Source" Value="../../images/page/pay.png"/>
+                <Setter TargetName="tb_model" Property="Text" Value="- "/>
+                <Setter TargetName="panel" Property="TextElement.Foreground" Value="Red"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+</ResourceDictionary>

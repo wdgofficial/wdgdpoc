@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90DA7345-06FC-45E8-8AC9-42D7DB0243AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WDG.Wallet.Win</RootNamespace>
+    <AssemblyName>WDG.Wallet.Win</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Administrator\Desktop\FiiiCoin\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>dwgcoin.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WDG.Wallet.Win.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C135347CA2CB8E78B8736B2B9FABE0299CE3C38F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FiiiCoin.Wallet.Win_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="GFramework.BlankWindow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GFramework.BlankWindow.0.2.0\lib\net40\GFramework.BlankWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.10.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.10\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="QRCoder, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.3\lib\net40\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Attaches\ControlAttachProperty.cs" />
+    <Compile Include="Biz\Initializer.cs" />
+    <Compile Include="Biz\Invokes\ImportBackInvoke.cs" />
+    <Compile Include="Biz\Invokes\InvokeKeys.cs" />
+    <Compile Include="Biz\Monitor\AmountMonitor.cs" />
+    <Compile Include="Biz\Monitor\AppUdateMonitor.cs" />
+    <Compile Include="Biz\Monitor\NetInfoMonitor.cs" />
+    <Compile Include="Biz\Monitor\NodeMonitor.cs" />
+    <Compile Include="Biz\Monitor\PayAddressBookMonitor.cs" />
+    <Compile Include="Biz\Monitor\ReceiveAddressBookMonitor.cs" />
+    <Compile Include="Biz\Monitor\ServiceMonitor.cs" />
+    <Compile Include="Biz\Monitor\ServiceMonitorBase.cs" />
+    <Compile Include="Biz\Monitor\TradeRecodesMonitor.cs" />
+    <Compile Include="Biz\Monitor\TxSettingMonitor.cs" />
+    <Compile Include="Biz\Monitor\UpdateMonitor.cs" />
+    <Compile Include="Biz\NodeInitializer.cs" />
+    <Compile Include="Biz\Services\AccountsService.cs" />
+    <Compile Include="Biz\Services\AddressBookService.cs" />
+    <Compile Include="Biz\Services\EngineService.cs" />
+    <Compile Include="Biz\Services\FiiiCoinService.cs" />
+    <Compile Include="Biz\Services\NetWorkService.cs" />
+    <Compile Include="Biz\Services\UtxoService.cs" />
+    <Compile Include="Biz\Services\WalletService.cs" />
+    <Compile Include="Common\bases\ServiceBase.cs" />
+    <Compile Include="Common\bases\NotifyBase.cs" />
+    <Compile Include="Common\Detects\DetectInRule.cs" />
+    <Compile Include="Common\Detects\DetectNetCore.cs" />
+    <Compile Include="Common\Detects\DetectVC2015.cs" />
+    <Compile Include="Common\Formats.cs" />
+    <Compile Include="Common\Keys\LanguageKeys.cs" />
+    <Compile Include="Converters\InitStepToStringConverter.cs" />
+    <Compile Include="Converters\ModelToStringConverter.cs" />
+    <Compile Include="Converters\MultiLongConverter.cs" />
+    <Compile Include="Converters\PagerConverter.cs" />
+    <Compile Include="Converters\StaticConverters.cs" />
+    <Compile Include="CustomControls\Waittings\CirclePointRingLoading.cs" />
+    <Compile Include="CustomControls\Waittings\FiveColumnLoading.cs" />
+    <Compile Include="CustomControls\Waittings\IconLoading.cs" />
+    <Compile Include="FiiiCoinSetting.cs" />
+    <Compile Include="Common\interfaces\IInvoke.cs" />
+    <Compile Include="Common\interfaces\IMonitor.cs" />
+    <Compile Include="Common\Keys\ConfigKeys.cs" />
+    <Compile Include="Common\Keys\MessageKeys.cs" />
+    <Compile Include="Common\Proxys\LogProxy.cs" />
+    <Compile Include="Common\Utils\ClipboardUtil.cs" />
+    <Compile Include="Common\Utils\DateTimeUtil.cs" />
+    <Compile Include="Common\Utils\ProcessUtil.cs" />
+    <Compile Include="Common\Utils\Validator.cs" />
+    <Compile Include="Common\Utils\QRCodeUtil.cs" />
+    <Compile Include="Common\Pages.cs" />
+    <Compile Include="Common\Services\BootStrapService.cs" />
+    <Compile Include="Common\bases\InstanceBase.cs" />
+    <Compile Include="Common\interfaces\IPage.cs" />
+    <Compile Include="Common\interfaces\IShell.cs" />
+    <Compile Include="Common\Services\LanguageService.cs" />
+    <Compile Include="Common\bases\SerializerBase.cs" />
+    <Compile Include="Common\bases\VmBase.cs" />
+    <Compile Include="Common\Utils\Win32Util.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\BoolsToBoolMultiConverter.cs" />
+    <Compile Include="Converters\BoolToPathGeometryConverter.cs" />
+    <Compile Include="Converters\CategoryToStringConverter.cs" />
+    <Compile Include="Converters\CompareToVisibilityConverter.cs" />
+    <Compile Include="Converters\ConfirmationToColor.cs" />
+    <Compile Include="Converters\ConfirmationToStatus.cs" />
+    <Compile Include="Converters\ConfirmationToStatusDetail.cs" />
+    <Compile Include="Converters\DatePickerConverter.cs" />
+    <Compile Include="Converters\DateToStringConverter.cs" />
+    <Compile Include="Converters\EnumToVisibilityConverter.cs" />
+    <Compile Include="Converters\IntCompareToVisibilityConverter.cs" />
+    <Compile Include="Converters\IsNullConverter.cs" />
+    <Compile Include="Converters\ListCountToEnableConverter.cs" />
+    <Compile Include="Converters\LongToDoubleConverter.cs" />
+    <Compile Include="Converters\NullToValueConverter.cs" />
+    <Compile Include="Converters\PaymentToMarkConverter.cs" />
+    <Compile Include="Converters\PaymentToTradeAmountConverter.cs" />
+    <Compile Include="Converters\StringToPathGeometryConverter.cs" />
+    <Compile Include="Converters\SubStringConverter.cs" />
+    <Compile Include="Converters\TimestampToDateTimeConverter.cs" />
+    <Compile Include="Converters\TimestampToTimeRangeConverter.cs" />
+    <Compile Include="Converters\UrlInfoModeToTitleConverter.cs" />
+    <Compile Include="Converters\ValidationConverter.cs" />
+    <Compile Include="CustomControls\ImageButton\ImageButton.cs" />
+    <Compile Include="CustomControls\PathButton\PathButton.cs" />
+    <Compile Include="CustomControls\ToggleImageButton\ToggleImageButton.cs" />
+    <Compile Include="AppSettingConfig.cs" />
+    <Compile Include="CustomControls\TogglePathButton\TogglePathButton.cs" />
+    <Compile Include="InitPage.xaml.cs">
+      <DependentUpon>InitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CommonParams\TitleWithParams.cs" />
+    <Compile Include="Models\ConfigMembers\AppSetting.cs" />
+    <Compile Include="Models\InitStep.cs" />
+    <Compile Include="Models\MessageTopic.cs" />
+    <Compile Include="Models\PopUpParams.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\SendMsgData.cs" />
+    <Compile Include="Models\TimeGoalItem.cs" />
+    <Compile Include="Models\TradeRecordInfo.cs" />
+    <Compile Include="Models\TradeType.cs" />
+    <Compile Include="Models\UiModels\BlockSyncInfo.cs" />
+    <Compile Include="Models\UiModels\Common\HeaderInfo.cs" />
+    <Compile Include="Models\UiModels\Common\MoneyInfo.cs" />
+    <Compile Include="Models\UiModels\ConfirmSendData.cs" />
+    <Compile Include="Models\UiModels\MenuModels\MenuBase.cs" />
+    <Compile Include="Models\UiModels\MenuModels\MenuInfo.cs" />
+    <Compile Include="Models\UiModels\MenuModels\MenuSeparator.cs" />
+    <Compile Include="Models\UiModels\MessagePageData.cs" />
+    <Compile Include="Models\UiModels\PassWordData.cs" />
+    <Compile Include="Models\UiModels\PaymentCategoryType.cs" />
+    <Compile Include="Models\UiModels\PayUrlInfo.cs" />
+    <Compile Include="Models\UiModels\ReceiveInfo.cs" />
+    <Compile Include="Models\UiModels\SendItemInfo.cs" />
+    <Compile Include="Biz\Invokes\ExportBackInvoke.cs" />
+    <Compile Include="Models\WalletModel.cs" />
+    <Compile Include="resources\Controls\FButton.xaml.cs">
+      <DependentUpon>FButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="resources\Controls\MultiComboBox.xaml.cs">
+      <DependentUpon>MultiComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Selectors\MenuItemContainerTemplateSelector.cs" />
+    <Compile Include="Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationRules\NotNullValidationRule.cs" />
+    <Compile Include="ValidationRules\PasswordRule.cs" />
+    <Compile Include="ValidationRules\RegexRule.cs" />
+    <Compile Include="ValidationRules\RuleBase.cs" />
+    <Compile Include="ValidationRules\SizeRangeRule.cs" />
+    <Compile Include="ValidationRules\ValidationType.cs" />
+    <Compile Include="ViewModels\ClosingViewModel.cs" />
+    <Compile Include="ViewModels\Common\GlobalViewModel.cs" />
+    <Compile Include="ViewModels\InitViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\OverviewViewModel.cs" />
+    <Compile Include="ViewModels\SendViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\AboutViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\Choose_Chg_Addr_VM.cs" />
+    <Compile Include="ViewModels\ShellPages\Choose_Utxo_VM.cs" />
+    <Compile Include="ViewModels\ShellPages\ConfirmSendViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\CreatePayUrlViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\FeesViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\ImageViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\InputWalletPwdViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\PayUrlsViewModel.cs" />
+    <Compile Include="Common\bases\PopupShellBase.cs" />
+    <Compile Include="ViewModels\ShellPages\ReceiveAddressViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\RequestPayViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\SendSettingViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\TradeDetailMiningViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\TradeDetailReceiveViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\TradeDetailSendViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\PopupShellViewModel.cs" />
+    <Compile Include="ViewModels\ReceiveViewModel.cs" />
+    <Compile Include="ViewModels\Common\StaticViewModel.cs" />
+    <Compile Include="ViewModels\SynchroDataViewModel.cs" />
+    <Compile Include="ViewModels\TradeRecordViewModel.cs" />
+    <Compile Include="Views\ClosingPage.xaml.cs">
+      <DependentUpon>ClosingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\PagerControl.xaml.cs">
+      <DependentUpon>PagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\UserPassWord.xaml.cs">
+      <DependentUpon>UserPassWord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ShellPages\OptionViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\MessageViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\OpenUrlViewModel.cs" />
+    <Compile Include="ViewModels\ShellPages\PasswordSettingViewModel.cs" />
+    <Compile Include="Views\OverviewPage.xaml.cs">
+      <DependentUpon>OverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupShell.xaml.cs">
+      <DependentUpon>PopupShell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReceivePage.xaml.cs">
+      <DependentUpon>ReceivePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SendPage.xaml.cs">
+      <DependentUpon>SendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\ImagePage.xaml.cs">
+      <DependentUpon>ImagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\Choose_Utxo_Page.xaml.cs">
+      <DependentUpon>Choose_Utxo_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\Choose_Chg_AddrPage.xaml.cs">
+      <DependentUpon>Choose_Chg_AddrPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\ReceiveAddressPage.xaml.cs">
+      <DependentUpon>ReceiveAddressPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\SendSettingPage.xaml.cs">
+      <DependentUpon>SendSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SynchroDataPage.xaml.cs">
+      <DependentUpon>SynchroDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TradeRecordPage.xaml.cs">
+      <DependentUpon>TradeRecordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\ConfirmSendPage.xaml.cs">
+      <DependentUpon>ConfirmSendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\CreatePayUrlPage.xaml.cs">
+      <DependentUpon>CreatePayUrlPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\FeesPage.xaml.cs">
+      <DependentUpon>FeesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\InputWalletPwdPage.xaml.cs">
+      <DependentUpon>InputWalletPwdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\OptionPage.xaml.cs">
+      <DependentUpon>OptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\MessagePage.xaml.cs">
+      <DependentUpon>MessagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\OpenUrlPage.xaml.cs">
+      <DependentUpon>OpenUrlPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\PasswordSettingPage.xaml.cs">
+      <DependentUpon>PasswordSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\PayUrlsPage.xaml.cs">
+      <DependentUpon>PayUrlsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\RequestPayPage.xaml.cs">
+      <DependentUpon>RequestPayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\TitleControl.xaml.cs">
+      <DependentUpon>TitleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\TradeDetailMiningPage.xaml.cs">
+      <DependentUpon>TradeDetailMiningPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\TradeDetailSendPage.xaml.cs">
+      <DependentUpon>TradeDetailSendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPages\TradeDetailReceivePage.xaml.cs">
+      <DependentUpon>TradeDetailReceivePage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CustomControls\ImageButton\ImageButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\PathButton\PathButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\ToggleImageButton\ToggleImageButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\TogglePathButton\TogglePathButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\Waittings\CirclePointRingLoadingStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\Waittings\FiveColumnLoading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\Waittings\IconLoadingStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InitPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lang\en_us.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lang\errorcodes\error_enus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lang\errorcodes\error_zhcn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lang\zh_cn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="resources\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\ComboboxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\Controls\FButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\Controls\MultiComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DataGridStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DataTemplates\SendItemInfoDataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DataTemplates\TradeRecordInfoDataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DatePickerStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DateTimeThemes\Calendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DateTimeThemes\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DateTimeThemes\DatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DateTimeThemes\FIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DateTimeThemes\Share.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DateTimeThemes\ToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DoubleUpDownStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\DataTemplates\HeaderInfoDataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\Geometrys.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\MenuStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\PanelStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\ValidationTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ClosingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\PagerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\UserPassWord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OverviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReceivePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\ImagePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\Choose_Utxo_Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShellPages\Choose_Chg_AddrPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShellPages\ReceiveAddressPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\SendSettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SynchroDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TradeRecordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\ConfirmSendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\CreatePayUrlPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\FeesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\InputWalletPwdPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\OptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\MessagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\OpenUrlPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\PasswordSettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\PayUrlsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\RequestPayPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\TitleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\TradeDetailMiningPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\TradeDetailSendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellPages\TradeDetailReceivePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="AppSetting.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="resources\iconfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tabicons\overview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tabicons\receive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tabicons\traderecord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tabicons\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\sucess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\amountChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\aboutback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\oldurl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\parse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\tooltip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\windows\dialog_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\windows\window_close.png" />
+    <Resource Include="images\windows\window_max.png" />
+    <Resource Include="images\windows\window_min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\page\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\back_in1it.png" />
+    <Resource Include="images\bg_close.png" />
+    <Resource Include="images\back_init.png" />
+    <Resource Include="images\back_init1.png" />
+    <Resource Include="dwgcoin.ico" />
+    <Content Include="lang\res\about_enus.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lang\res\about_zhcn.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\dwgcoin.ico" />
+    <Resource Include="images\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WDG.Business\WDG.Business.csproj">
+      <Project>{9381d2e7-eaad-4d32-8f0d-cd620896cfd6}</Project>
+      <Name>WDG.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.DTO\WDG.DTO.csproj">
+      <Project>{3dc47f55-c96d-407a-9b94-5e151f2e8157}</Project>
+      <Name>WDG.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.Models\WDG.Models.csproj">
+      <Project>{1d9484b2-bb18-4bc0-a806-47797bb5717d}</Project>
+      <Name>WDG.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.ServiceAgent\WDG.ServiceAgent.csproj">
+      <Project>{549bc89f-7f7a-45a1-abc2-b940878fec96}</Project>
+      <Name>WDG.ServiceAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.Utility\WDG.Utility.csproj">
+      <Project>{9d60c106-705d-4f14-8c04-5178021abd72}</Project>
+      <Name>WDG.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,83 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:controls="clr-namespace:WDG.Wallet.Win.CustomControls"
+    x:Class="WDG.Wallet.Win.MainPage"
+    mc:Ignorable="d"
+    Title="Bitcoin Core">
+    <Page.DataContext>
+        <vm:MainViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <SolidColorBrush x:Key="enable_ContentColor" Color="#666666" Opacity="0.3"/>
+        <SolidColorBrush x:Key="normal_ContentColor" Color="#666666" Opacity="0.8"/>
+        <SolidColorBrush x:Key="mouseOver_ContentColor" Color="#666666"/>
+    </Page.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding PageCommand}" CommandParameter="OnLoaded"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid Background="{StaticResource MainBackgroundColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#1F233B" Grid.Row="1" Orientation="Horizontal" Height="60">
+            <Image Margin="32 0 0 0" Source="images/logo.png" Width="28" Height="32"/>
+            <TextBlock Text="{DynamicResource Main_Title}" VerticalAlignment="Center" FontFamily="PingFangSC-Regular" FontSize="16" Foreground="#A3AFB6 " Margin="10"/>
+            <ItemsControl ItemsSource="{Binding TabHeaders}" Height="60" VerticalAlignment="Top" ItemsPanel="{StaticResource HorizontalItemsPanelTemplate}"/>
+        </StackPanel>
+
+        <Frame x:Name="frame" Grid.Row="3" Content="{Binding ViewPage}" NavigationUIVisibility="Hidden"/>
+
+        <Canvas Grid.Row="4" Height="170">
+            <StackPanel Orientation="Horizontal" Margin="30 45 0 0" Visibility="{Binding IsShowNoNet,Converter={StaticResource _booleanToVisibilityConverter}}">
+                <TextBlock Height="20" Text="{DynamicResource Error_NoNet}" Visibility="{Binding IsChecked,Converter={StaticResource _booleanToVisibilityConverter}}" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="30 45 0 0" Visibility="{Binding IsShowProgress,Converter={StaticResource _booleanToVisibilityConverter}}">
+                <TextBlock Height="20" Text="{DynamicResource SyncProgress}" Visibility="{Binding IsChecked,ElementName=network,Converter={StaticResource _booleanToVisibilityConverter},ConverterParameter=reverse}"/>
+                <TextBlock Height="20" Text="{DynamicResource Error_NoNet}" Visibility="{Binding IsChecked,ElementName=network,Converter={StaticResource _booleanToVisibilityConverter}}" />
+
+                <Grid Margin="30 0 0 0" Visibility="{Binding IsChecked,ElementName=network,Converter={StaticResource _booleanToVisibilityConverter},ConverterParameter=reverse}">
+                    <ProgressBar Width="320" Height="20" Value="{Binding BlockSyncInfo.Progress}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding ProgressCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ProgressBar>
+                    <TextBlock Text="{Binding BlockSyncInfo.BehindTime}" VerticalAlignment="Center" Margin="20 0 0 0">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding ProgressCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+
+            <controls:TogglePathButton x:Name="network" Width="30" Height="30" xml:space="preserve"
+                                       BorderThickness="0" BorderBrush="Transparent"
+                                       DefaultFillBrush ="{StaticResource normal_ContentColor}"
+                                       MouseOverBrush="{StaticResource mouseOver_ContentColor}"
+                                       IsPressedBrush="{StaticResource mouseOver_ContentColor}"
+                                       PathData="{Binding IsChecked,ElementName=network,Converter={StaticResource _boolToPathGeometryConverter},ConverterParameter='path_main_noNet|path_main_net'}" 
+                                       ToolTip="{Binding NetToolTip}" Command="{Binding NetWorkCommand}"
+                                       CommandParameter="{Binding IsChecked,ElementName=network}" Canvas.Top="45" Canvas.Right="140"/>
+
+            <controls:PathButton PathData="{Binding IsSyncComplete,Converter={StaticResource _boolToPathGeometryConverter},ConverterParameter='path_main_updatecomplete|path_main_updating'}" 
+                                 ImageWidth="20" ImageHeight="20"
+                                 Width="30" Height="30" Padding="5" Canvas.Top="45" Canvas.Right="100"/>
+        </Canvas>
+    </Grid>
+</Page>

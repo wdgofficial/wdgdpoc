@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WDG.Wallet.Win.CustomControls">
+
+    <SolidColorBrush x:Key="ToggleImageButtonCheckedColor" Color="White" Opacity="0.15"/>
+
+
+    <Style TargetType="{x:Type local:TogglePathButton}">
+        <Setter Property="BorderBrush" Value="#264555"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#A3AFB6"/>
+        <Setter Property="FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="DefaultFillBrush" Value="#FFA3AFB6"/>
+        <Setter Property="MouseOverBrush" Value="#FFFFFF"/>
+        <Setter Property="IsEnabledBrush" Value="{StaticResource enable_ContentColor}"/>
+        <Setter Property="IsPressedBrush" Value="#FFFFFF"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:TogglePathButton}">
+                    <Grid x:Name="bg"
+                          Background="{TemplateBinding Background}"
+                          Margin="{TemplateBinding Margin}"
+                          VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                          HorizontalAlignment="{TemplateBinding HorizontalAlignment}">
+                        <Grid Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Path x:Name="path" Stretch="Fill" Fill="{TemplateBinding DefaultFillBrush}" Width="20" Height="20"  Margin="{TemplateBinding Padding}" Data="{TemplateBinding PathData}"/>
+
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3 0 0 0" Grid.Column="1"/>
+                        </Grid>
+
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Margin="0 10"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="bg" Property="Background" Value="{StaticResource ToggleImageButtonCheckedColor}"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="0"/>
+                            <Setter TargetName="path" Property="Fill" Value="{Binding IsPressedBrush,RelativeSource={RelativeSource AncestorType=local:TogglePathButton}}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="{Binding MouseOverBrush,RelativeSource={RelativeSource AncestorType=local:TogglePathButton}}" />
+                            <Setter Property="Foreground" Value="#FFFFFF" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="{Binding IsPressedBrush,RelativeSource={RelativeSource AncestorType=local:TogglePathButton}}" />
+                            <Setter Property="Foreground" Value="#FFFFFF" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="path" Property="Fill" Value="{Binding IsEnabledBrush,RelativeSource={RelativeSource AncestorType=local:TogglePathButton}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

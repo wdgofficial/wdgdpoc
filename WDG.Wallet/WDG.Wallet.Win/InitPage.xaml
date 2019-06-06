@@ -1,0 +1,81 @@
+﻿<Page x:Class="WDG.Wallet.Win.InitPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WDG.Wallet.Win"
+      xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels"
+      xmlns:converters="clr-namespace:WDG.Wallet.Win.Converters"
+      xmlns:waitctls="clr-namespace:WDG.Wallet.Win.CustomControls.Waittings"
+      
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="InitPage">
+    <Page.DataContext>
+        <vm:InitViewModel/>
+    </Page.DataContext>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding DataContext.OnPageLoadedCommand,RelativeSource={RelativeSource AncestorType=local:InitPage}}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Page.Resources>
+        <SolidColorBrush x:Key="fontColor" Color="White"/>
+
+        <LinearGradientBrush x:Key="backColor" StartPoint="0,0" EndPoint="1,0">
+            <GradientStopCollection>
+                <GradientStop Color="#100A19" Offset="0.0"/>
+                <GradientStop Color="#401514" Offset="1.0"/>
+            </GradientStopCollection>
+        </LinearGradientBrush>
+
+    </Page.Resources>
+    <Grid Background="{StaticResource backColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Stretch="Fill" Grid.RowSpan="2" Source="images/back_init1.png"/>
+        <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Margin="40 40 0 0 ">
+            <Image Width="50" Height="50" Source="images/logo1.png"/>
+            <TextBlock Text="Winner Dynasty Group" Foreground="White" Margin="15 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" FontFamily="PingFangSC-Regular"/>
+            <WrapPanel HorizontalAlignment="Center" Visibility="Collapsed">
+                <TextBlock Text="{DynamicResource Version_T}" Foreground="#498BF4" HorizontalAlignment="Center" FontSize="16" FontFamily="PingFangSC-Regular"/>
+                <TextBlock Text="0.1.0" Foreground="#498BF4" HorizontalAlignment="Center" FontSize="16" FontFamily="PingFangSC-Regular"/>
+            </WrapPanel>
+        </StackPanel>
+
+        <Grid Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition MinWidth="600"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <Grid Grid.RowSpan="2" Margin="50 0 0 0" VerticalAlignment="Center" TextElement.FontStyle="Italic" TextElement.FontFamily="PingFangSC-Regular" TextElement.FontSize="30" TextElement.FontWeight="Bold" TextElement.Foreground="{StaticResource fontColor}">
+            <TextBlock Text="{DynamicResource init_caption1}" Margin="50 10 0 0"/>
+            <TextBlock Text="{DynamicResource init_caption2}" Margin="50 80 0 0"/>
+            <StackPanel Orientation="Horizontal" Margin="50 150 0 0">
+                <waitctls:CirclePointRingLoading Foreground="#2BD5E9" Width="18" Height="18" VerticalAlignment="Center"/>
+                <TextBlock FontSize="16" FontWeight="Normal" FontStyle="Normal" Foreground="{StaticResource fontColor}" Margin="10 0 0 -4" 
+                           VerticalAlignment="Center"
+                           DataContext="{x:Static vm:StaticViewModel.GlobalViewModel}"
+                           Text="{Binding InitStep,Converter={x:Static converters:StaticConverters.InitStepToStringConverter}}"
+                           />
+            </StackPanel>
+        </Grid>
+
+        <TextBlock Text="{Binding Msg.Message}" Foreground="#498BF4" Grid.RowSpan="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"
+                   FontSize="21" FontFamily="PingFangSC-Regular"/>
+
+        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="2" Margin="0 0 0 22"
+                   FontStyle="Normal" FontWeight="Normal" FontSize="16"
+                   Foreground="#CDBEFF" Text="V 1.0.2"/>
+    </Grid>
+</Page>

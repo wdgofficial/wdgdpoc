@@ -1,0 +1,38 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.ClosingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClosingPage">
+    <Page.DataContext>
+        <vm:ClosingViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../images/bg_close.png"/>
+        </Grid.Background>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!--<Image Width="100" Height="115" Margin="10">
+                <Image.Source>
+                    <DrawingImage>
+                        <DrawingImage.Drawing>
+                            <DrawingGroup ClipGeometry="M0,0 V74 H65 V0 H0 Z">
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="#FFDFDBFC" Geometry="F0 M65,74z M0,0z M63.110266,56.0986753L32.1622517,73.7693436 32.1105461,55.1935849 49.1223017,45.4571433 49.1223017,9.02335661 64.4027301,17.5504332C64.7192676,17.7270735,64.9154308,18.0611798,64.9154308,18.4236682L64.9154308,55.0986753C64.9154308,55.65096,64.4677155,56.0986753,63.9154308,56.0986753L63.110266,56.0986753z M1.88973401,17.6215877L32.8377483,-0.0490805695 32.8894539,18.5266781 15.8776983,28.2631197 15.8776983,64.6969064 0.597269928,56.1698298C0.280732366,55.9931895,0.0845692183,55.6590832,0.0845692183,55.2965948L0.0845692183,18.6215877C0.0845692183,18.069303,0.532284469,17.6215877,1.08456922,17.6215877L1.88973401,17.6215877z M17.9149936,31.0612877L32.4097763,22.3734226C32.5518893,22.2882431 32.7361463,22.3343968 32.8213259,22.4765098 32.8494016,22.5233513 32.8641588,22.5769679 32.8640063,22.6315788L32.8391235,31.5422235C32.83883,31.6473523,32.7835281,31.7446569,32.6933559,31.7987042L18.1985732,40.4865693C18.0564602,40.5717488 17.8722032,40.5255951 17.7870237,40.3834821 17.7589479,40.3366406 17.7441907,40.283024 17.7443432,40.2284132L17.769226,31.3177684C17.7695195,31.2126397,17.8248214,31.115335,17.9149936,31.0612877z M32.4100604,42.0240373L46.9048431,33.3361722C47.0469561,33.2509927 47.2312131,33.2971464 47.3163927,33.4392595 47.3444684,33.4861009 47.3592256,33.5397175 47.3590731,33.5943284L47.3341904,42.5049731C47.3338968,42.6101019,47.2785949,42.7074065,47.1884227,42.7614538L32.69364,51.4493189C32.551527,51.5344984 32.36727,51.4883447 32.2820905,51.3462317 32.2540147,51.2993902 32.2392575,51.2457736 32.23941,51.1911628L32.2642928,42.280518C32.2645864,42.1753893,32.3198883,42.0780846,32.4100604,42.0240373z" />
+                                </DrawingGroup>
+                            </DrawingGroup>
+                        </DrawingImage.Drawing>
+                    </DrawingImage>
+                </Image.Source>
+            </Image>-->
+            <Image Width="73" Height="73" Source="../images/logo1.png" Margin="10"/>
+            <TextBlock Text="{Binding CloseText}" Foreground="#DFDBFC" HorizontalAlignment="Center" Margin="10 20 10 10" FontSize="16"/>
+            <TextBlock Text="{DynamicResource Closing_caption2}" Foreground="#DFDBFC" HorizontalAlignment="Center" Margin="10" FontSize="16"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>

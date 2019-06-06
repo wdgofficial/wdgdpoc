@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A9CA387-FC4C-4FAB-8E41-B57A1204B31B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FiiiCoin.Wallet.Test</RootNamespace>
+    <AssemblyName>FiiiCoin.Wallet.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentScheduler, Version=5.3.0.0, Culture=neutral, PublicKeyToken=b76503528a14ebd1, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentScheduler.5.3.0\lib\net40\FluentScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bussiness\AccountsApiTest.cs" />
+    <Compile Include="Bussiness\AddressBookApiTest.cs" />
+    <Compile Include="Bussiness\BlockChainEngineApiTest.cs" />
+    <Compile Include="Bussiness\MemoryPoolApiTest.cs" />
+    <Compile Include="Bussiness\NetworkApiTest.cs" />
+    <Compile Include="Bussiness\PaymentRequestApiTest.cs" />
+    <Compile Include="Bussiness\TransactionApiTest.cs" />
+    <Compile Include="Bussiness\UtxoApiTest.cs" />
+    <Compile Include="Bussiness\WalletManagementApiTest.cs" />
+    <Compile Include="ServiceAgent\AccountsTest.cs" />
+    <Compile Include="ServiceAgent\AddressBookTest.cs" />
+    <Compile Include="ServiceAgent\BlockChainEngineTest.cs" />
+    <Compile Include="ServiceAgent\MemoryPoolTest.cs" />
+    <Compile Include="ServiceAgent\NetworkTest.cs" />
+    <Compile Include="ServiceAgent\PaymentRequestTest.cs" />
+    <Compile Include="ServiceAgent\WalletMangementTest.cs" />
+    <Compile Include="Utility\AddressToolsTest.cs" />
+    <Compile Include="Utility\JsonTest.cs" />
+    <Compile Include="Utility\LocalizationTest.cs" />
+    <Compile Include="ServiceAgent\TransactionTest.cs" />
+    <Compile Include="ServiceAgent\UTXOTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WDG.Business\WDG.Business.csproj">
+      <Project>{9381d2e7-eaad-4d32-8f0d-cd620896cfd6}</Project>
+      <Name>WDG.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.DTO\WDG.DTO.csproj">
+      <Project>{3dc47f55-c96d-407a-9b94-5e151f2e8157}</Project>
+      <Name>WDG.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.Models\WDG.Models.csproj">
+      <Project>{1d9484b2-bb18-4bc0-a806-47797bb5717d}</Project>
+      <Name>WDG.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.ServiceAgent\WDG.ServiceAgent.csproj">
+      <Project>{549bc89f-7f7a-45a1-abc2-b940878fec96}</Project>
+      <Name>WDG.ServiceAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDG.Utility\WDG.Utility.csproj">
+      <Project>{9d60c106-705d-4f14-8c04-5178021abd72}</Project>
+      <Name>WDG.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.1\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

@@ -1,0 +1,14 @@
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\bin\Debug\netstandard2.0\log4net.config
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\bin\Debug\netstandard2.0\WDG.DTO.deps.json
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\bin\Debug\netstandard2.0\WDG.DTO.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\bin\Debug\netstandard2.0\WDG.DTO.pdb
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\bin\Debug\netstandard2.0\WDG.Utility.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\bin\Debug\netstandard2.0\WDG.Utility.pdb
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\bin\Debug\netstandard2.0\zh\WDG.Utility.resources.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\obj\Debug\netstandard2.0\WDG.DTO.csprojAssemblyReference.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\obj\Debug\netstandard2.0\WDG.DTO.csproj.CoreCompileInputs.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\obj\Debug\netstandard2.0\WDG.DTO.AssemblyInfoInputs.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\obj\Debug\netstandard2.0\WDG.DTO.AssemblyInfo.cs
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\obj\Debug\netstandard2.0\WDG.DTO.csproj.CopyComplete
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\obj\Debug\netstandard2.0\WDG.DTO.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.DTO\obj\Debug\netstandard2.0\WDG.DTO.pdb

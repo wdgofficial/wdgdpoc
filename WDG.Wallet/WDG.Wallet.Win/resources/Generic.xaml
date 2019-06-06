@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DateTimeThemes/Colors.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Controls/FButton.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DateTimeThemes/FIcon.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DateTimeThemes/DatePicker.xaml"/>
+
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Geometrys.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Converters.xaml" />
+
+
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/ValidationTemplate.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Colors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DataGridStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/MenuStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/PanelStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/TextBoxStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DoubleUpDownStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/ComboboxStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/ButtonStyle.xaml" />
+
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DataTemplates/HeaderInfoDataTemplate.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DataTemplates/TradeRecordInfoDataTemplate.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/DataTemplates/SendItemInfoDataTemplate.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

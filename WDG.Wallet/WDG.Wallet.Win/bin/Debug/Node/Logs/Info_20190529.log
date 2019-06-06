@@ -1,0 +1,71 @@
+2019-05-29 10:58:54,842 [1] INFO  ConsoleLog [(null)] - FiiiChain Testnet Engine is Started.
+2019-05-29 10:58:57,032 [11] DEBUG ConsoleLog [(null)] -  Connect to 47.75.51.45
+2019-05-29 10:58:57,101 [14] DEBUG ConsoleLog [(null)] - Send Ping to 47.75.51.45:20302  queue[0]
+2019-05-29 10:59:12,971 [3] INFO  ConsoleLog [(null)] - P2P Server is stoped or disabled.
+2019-05-29 11:01:49,310 [1] INFO  ConsoleLog [(null)] - FiiiChain Engine is Started.
+2019-05-29 11:01:49,656 [1] INFO  ConsoleLog [(null)] - Start to install patch 2
+2019-05-29 11:01:49,657 [1] INFO  ConsoleLog [(null)] - Patch 2 installed
+2019-05-29 11:01:49,657 [1] INFO  ConsoleLog [(null)] - Start to install patch 3
+2019-05-29 11:01:49,658 [1] INFO  ConsoleLog [(null)] - Patch 3 installed
+2019-05-29 11:01:49,658 [1] INFO  ConsoleLog [(null)] - Start to install patch 4
+2019-05-29 11:01:49,658 [1] INFO  ConsoleLog [(null)] - Patch 4 installed
+2019-05-29 11:01:50,354 [12] DEBUG ConsoleLog [(null)] -  Connect to 47.75.51.45
+2019-05-29 11:01:50,424 [15] DEBUG ConsoleLog [(null)] - Send Ping to 47.75.51.45:20101  queue[0]
+2019-05-29 11:01:50,467 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.75.51.45:20101, Command:Pong
+2019-05-29 11:01:50,467 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:50,546 [15] DEBUG ConsoleLog [(null)] - Send Version to 47.75.51.45:20101  queue[0]
+2019-05-29 11:01:50,579 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.75.51.45:20101, Command:Version
+2019-05-29 11:01:50,579 [14] DEBUG ConsoleLog [(null)] - Current queue size 1
+2019-05-29 11:01:50,581 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.75.51.45:20101, Command:VerAck
+2019-05-29 11:01:50,582 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:50,667 [15] DEBUG ConsoleLog [(null)] - Send VerAck to 47.75.51.45:20101  queue[2]
+2019-05-29 11:01:50,728 [15] DEBUG ConsoleLog [(null)] - Send Heartbeat to 47.75.51.45:20101  queue[1]
+2019-05-29 11:01:50,789 [15] DEBUG ConsoleLog [(null)] - Send GetAddr to 47.75.51.45:20101  queue[0]
+2019-05-29 11:01:50,886 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.75.51.45:20101, Command:Addr
+2019-05-29 11:01:50,886 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:50,889 [14] DEBUG ConsoleLog [(null)] -  Connect to 47.244.44.27
+2019-05-29 11:01:50,889 [14] DEBUG ConsoleLog [(null)] -  Connect to 183.14.31.209
+2019-05-29 11:01:50,889 [14] DEBUG ConsoleLog [(null)] -  Connect to 183.14.31.209
+2019-05-29 11:01:50,971 [15] DEBUG ConsoleLog [(null)] - Send Ping to 47.244.44.27:20111  queue[2]
+2019-05-29 11:01:50,990 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:Pong
+2019-05-29 11:01:50,990 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:51,032 [15] DEBUG ConsoleLog [(null)] - Send Ping to 183.14.31.209:33781  queue[2]
+2019-05-29 11:01:51,090 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:Version
+2019-05-29 11:01:51,090 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:51,093 [15] DEBUG ConsoleLog [(null)] - Send Ping to 183.14.31.209:36773  queue[2]
+2019-05-29 11:01:51,154 [15] DEBUG ConsoleLog [(null)] - Send Version to 47.244.44.27:20111  queue[1]
+2019-05-29 11:01:51,215 [15] DEBUG ConsoleLog [(null)] - Send VerAck to 47.244.44.27:20111  queue[0]
+2019-05-29 11:01:51,289 [16] INFO  ConsoleLog [(null)] - this is beginner
+2019-05-29 11:01:51,289 [16] INFO  ConsoleLog [(null)] - this is setting init
+2019-05-29 11:01:51,289 [16] INFO  ConsoleLog [(null)] - this is get setting
+2019-05-29 11:01:51,292 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:VerAck
+2019-05-29 11:01:51,292 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:51,299 [16] INFO  ConsoleLog [(null)] - this is result
+2019-05-29 11:01:51,300 [16] INFO  ConsoleLog [(null)] - this is setting Confirmations
+2019-05-29 11:01:51,300 [16] INFO  ConsoleLog [(null)] - this is setting FeePerKB
+2019-05-29 11:01:51,300 [16] INFO  ConsoleLog [(null)] - this is encrypt
+2019-05-29 11:01:51,300 [16] INFO  ConsoleLog [(null)] - this is return
+2019-05-29 11:01:51,393 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:Heartbeat
+2019-05-29 11:01:51,394 [14] DEBUG ConsoleLog [(null)] - Current queue size 1
+2019-05-29 11:01:51,395 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:GetMPools
+2019-05-29 11:01:51,395 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:51,397 [15] DEBUG ConsoleLog [(null)] - Send Heartbeat to 47.244.44.27:20111  queue[2]
+2019-05-29 11:01:51,458 [15] DEBUG ConsoleLog [(null)] - Send GetMPools to 47.244.44.27:20111  queue[2]
+2019-05-29 11:01:51,498 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:GetTxPool
+2019-05-29 11:01:51,498 [14] DEBUG ConsoleLog [(null)] - Current queue size 1
+2019-05-29 11:01:51,499 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:MPools
+2019-05-29 11:01:51,499 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:51,519 [15] DEBUG ConsoleLog [(null)] - Send GetTxPool to 47.244.44.27:20111  queue[1]
+2019-05-29 11:01:51,580 [15] DEBUG ConsoleLog [(null)] - Send MPools to 47.244.44.27:20111  queue[0]
+2019-05-29 11:01:51,619 [14] DEBUG ConsoleLog [(null)] - Received cmd from 47.244.44.27:20111, Command:TxPool
+2019-05-29 11:01:51,619 [14] DEBUG ConsoleLog [(null)] - Current queue size 0
+2019-05-29 11:01:51,625 [14] DEBUG ConsoleLog [(null)] - TxPool Hashes Count:0
+2019-05-29 11:01:51,970 [11] INFO  ConsoleLog [(null)] - this is beginner
+2019-05-29 11:01:51,970 [11] INFO  ConsoleLog [(null)] - this is setting init
+2019-05-29 11:01:51,970 [11] INFO  ConsoleLog [(null)] - this is get setting
+2019-05-29 11:01:51,971 [11] INFO  ConsoleLog [(null)] - this is result
+2019-05-29 11:01:51,971 [11] INFO  ConsoleLog [(null)] - this is setting Confirmations
+2019-05-29 11:01:51,971 [11] INFO  ConsoleLog [(null)] - this is setting FeePerKB
+2019-05-29 11:01:51,971 [11] INFO  ConsoleLog [(null)] - this is encrypt
+2019-05-29 11:01:51,971 [11] INFO  ConsoleLog [(null)] - this is return
+2019-05-29 11:01:56,473 [8] INFO  ConsoleLog [(null)] - P2P Server is stoped or disabled.

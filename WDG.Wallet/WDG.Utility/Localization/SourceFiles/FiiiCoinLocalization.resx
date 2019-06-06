@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="0000000" xml:space="preserve">
+    <value>UNKNOWN_ERROR</value>
+  </data>
+  <data name="1000000" xml:space="preserve">
+    <value>ENGINE_COMMON_ERROR</value>
+  </data>
+  <data name="1010000" xml:space="preserve">
+    <value>UTXO_COMMON_ERROR</value>
+  </data>
+  <data name="1020000" xml:space="preserve">
+    <value>TRANSACTION_COMMON_ERROR</value>
+  </data>
+  <data name="1020100" xml:space="preserve">
+    <value>VERIFY_COMMON_ERROR</value>
+  </data>
+  <data name="1020101" xml:space="preserve">
+    <value>TRANSACTION_HASH_ERROR</value>
+  </data>
+  <data name="1020102" xml:space="preserve">
+    <value>TRANSACTION_HAS_BEEN_EXISTED</value>
+  </data>
+  <data name="1020103" xml:space="preserve">
+    <value>INPUT_AND_OUTPUT_CANNOT_BE_EMPTY</value>
+  </data>
+  <data name="1020104" xml:space="preserve">
+    <value>INPUT_EXCEEDED_THE_LIMIT</value>
+  </data>
+  <data name="1020105" xml:space="preserve">
+    <value>OUTPUT_EXCEEDED_THE_LIMIT</value>
+  </data>
+  <data name="1020106" xml:space="preserve">
+    <value>HASH_CANNOT_BE_EMPTY</value>
+  </data>
+  <data name="1020107" xml:space="preserve">
+    <value>LOCK_TIME_EXCEEDED_THE_LIMIT</value>
+  </data>
+  <data name="1020108" xml:space="preserve">
+    <value>TRANSACTION_SIZE_BELOW_THE_LIMIT</value>
+  </data>
+  <data name="1020109" xml:space="preserve">
+    <value>NUMBER_OF_SIGNATURES_EXCEEDED_THE_LIMIT</value>
+  </data>
+  <data name="1020110" xml:space="preserve">
+    <value>SCRIPT_FORMAT_ERROR</value>
+  </data>
+  <data name="1020111" xml:space="preserve">
+    <value>UTXO_HAS_BEEN_SPENT</value>
+  </data>
+  <data name="1020112" xml:space="preserve">
+    <value>COINBASE_UTXO_LESS_THAN_100_CONFIRMS</value>
+  </data>
+  <data name="1020113" xml:space="preserve">
+    <value>OUTPUT_LARGE_THAN_INPUT</value>
+  </data>
+  <data name="1020114" xml:space="preserve">
+    <value>TRANSACTION_FEE_IS_TOO_FEW</value>
+  </data>
+  <data name="1020115" xml:space="preserve">
+    <value>UTXO_UNLOCK_FAIL</value>
+  </data>
+  <data name="1020116" xml:space="preserve">
+    <value>UTXO_NOT_EXISTED</value>
+  </data>
+  <data name="1020117" xml:space="preserve">
+    <value>COINBASE_FORMAT_ERROR</value>
+  </data>
+  <data name="1020118" xml:space="preserve">
+    <value>COINBASE_OUTPUT_AMOUNT_ERROR</value>
+  </data>
+  <data name="1020119" xml:space="preserve">
+    <value>PRIVATE_KEY_IS_ERROR</value>
+  </data>
+  <data name="1020120" xml:space="preserve">
+    <value>TRANSACTION_IS_LOCKED</value>
+  </data>
+  <data name="1020121" xml:space="preserve">
+    <value>COINBASE_NEED_100_CONFIRMS</value>
+  </data>
+  <data name="1030000" xml:space="preserve">
+    <value>BLOCK_COMMON_ERROR</value>
+  </data>
+  <data name="1030100" xml:space="preserve">
+    <value>BLOCK_VERIFY_COMMON_ERROR</value>
+  </data>
+  <data name="1030101" xml:space="preserve">
+    <value>BLOCK_HAS_BEEN_EXISTED</value>
+  </data>
+  <data name="1030102" xml:space="preserve">
+    <value>BLOCK_HASH_ERROR</value>
+  </data>
+  <data name="1030103" xml:space="preserve">
+    <value>BLOCK_SIZE_LARGE_THAN_LIMIT</value>
+  </data>
+  <data name="1030104" xml:space="preserve">
+    <value>TRANSACTION_VERIFY_FAIL</value>
+  </data>
+  <data name="1030105" xml:space="preserve">
+    <value>POW_VERIFY_FAIL</value>
+  </data>
+  <data name="1030106" xml:space="preserve">
+    <value>BITS_IS_WRONG</value>
+  </data>
+  <data name="1030107" xml:space="preserve">
+    <value>PREV_BLOCK_NOT_EXISTED</value>
+  </data>
+  <data name="1030108" xml:space="preserve">
+    <value>BLOCK_TIME_IS_ERROR</value>
+  </data>
+  <data name="1040000" xml:space="preserve">
+    <value>BLOCK_CHAIN_COMMON_ERROR</value>
+  </data>
+  <data name="1050000" xml:space="preserve">
+    <value>ENGINE_ACCOUNT_COMMON_ERROR</value>
+  </data>
+  <data name="1060000" xml:space="preserve">
+    <value>P2P_COMMON_ERROR</value>
+  </data>
+  <data name="1060100" xml:space="preserve">
+    <value>CONNECTION_COMMON_ERROR</value>
+  </data>
+  <data name="1060101" xml:space="preserve">
+    <value>HOST_NAME_CAN_NOT_RESOLVED_TO_IP_ADDRESS</value>
+  </data>
+  <data name="1060102" xml:space="preserve">
+    <value>THE_NUMBER_OF_CONNECTIONS_IS_FULL</value>
+  </data>
+  <data name="1060103" xml:space="preserve">
+    <value>THE_PEER_IS_EXISTED</value>
+  </data>
+  <data name="1060105" xml:space="preserve">
+    <value>NOT_RECEIVED_HEARTBEAT_MESSAGE_FOR_A_LONG_TIME</value>
+  </data>
+  <data name="1060106" xml:space="preserve">
+    <value>P2P_VERSION_NOT_BE_SUPPORT_BY_REMOTE_PEER</value>
+  </data>
+  <data name="1060107" xml:space="preserve">
+    <value>TIME_NOT_MATCH_WITH_RMOTE_PEER</value>
+  </data>
+  <data name="1060108" xml:space="preserve">
+    <value>PEER_IN_BLACK_LIST</value>
+  </data>
+  <data name="1070000" xml:space="preserve">
+    <value>WALLET_COMMON_ERROR</value>
+  </data>
+  <data name="1070001" xml:space="preserve">
+    <value>DECRYPT_DATA_ERROR</value>
+  </data>
+  <data name="1070002" xml:space="preserve">
+    <value>DATA_SAVE_TO_FILE_ERROR</value>
+  </data>
+  <data name="1070003" xml:space="preserve">
+    <value>CHECK_PASSWORD_ERROR</value>
+  </data>
+  <data name="1070100" xml:space="preserve">
+    <value>WALLET_IO_COMMON_ERROR</value>
+  </data>
+  <data name="1070101" xml:space="preserve">
+    <value>FILE_NOT_FOUND</value>
+  </data>
+  <data name="1070102" xml:space="preserve">
+    <value>EXTENSION_NAME_NOT_SUPPORT</value>
+  </data>
+  <data name="1070103" xml:space="preserve">
+    <value>FILE_DATA_INVALID</value>
+  </data>
+  <data name="1080200" xml:space="preserve">
+    <value>WALLET_DB_COMMON_ERROR</value>
+  </data>
+  <data name="1080201" xml:space="preserve">
+    <value>EXECUTE_SQL_ERROR</value>
+  </data>
+  <data name="1080202" xml:space="preserve">
+    <value>LOAD_DATA_ERROR</value>
+  </data>
+  <data name="2000000" xml:space="preserve">
+    <value>SERVICE_COMMON_ERROR</value>
+  </data>
+  <data name="2010000" xml:space="preserve">
+    <value>SERVICE_UTXO_COMMON_ERROR</value>
+  </data>
+  <data name="2010001" xml:space="preserve">
+    <value>CAN_NOT_ENCRYPT_AN_ENCRYPTED_WALLET</value>
+  </data>
+  <data name="2010002" xml:space="preserve">
+    <value>CAN_NOT_LOCK_AN_UNENCRYPTED_WALLET</value>
+  </data>
+  <data name="2010003" xml:space="preserve">
+    <value>CAN_NOT_UNLOCK_AN_UNENCRYPTED_WALLET</value>
+  </data>
+  <data name="2010004" xml:space="preserve">
+    <value>CAN_NOT_CHANGE_PASSWORD_IN_AN_UNENCRYPTED_WALLET</value>
+  </data>
+  <data name="2010005" xml:space="preserve">
+    <value>WALLET_HAS_BEEN_LOCKED</value>
+  </data>
+  <data name="2020000" xml:space="preserve">
+    <value>SERVICE_TRANSACTION_COMMON_ERROR</value>
+  </data>
+  <data name="2020001" xml:space="preserve">
+    <value>TO_ADDRESS_INVALID</value>
+  </data>
+  <data name="2020002" xml:space="preserve">
+    <value>BALANCE_NOT_ENOUGH</value>
+  </data>
+  <data name="2020003" xml:space="preserve">
+    <value>SEND_AMOUNT_LESS_THAN_FEE</value>
+  </data>
+  <data name="2020004" xml:space="preserve">
+    <value>FEE_DEDUCT_ADDRESS_INVALID</value>
+  </data>
+  <data name="2020005" xml:space="preserve">
+    <value>WALLET_DECRYPT_FAIL</value>
+  </data>
+  <data name="2030000" xml:space="preserve">
+    <value>SERVICE_ACCOUNT_COMMON_ERROR</value>
+  </data>
+  <data name="2030001" xml:space="preserve">
+    <value>ACCOUNT_NOT_FOUND</value>
+  </data>
+  <data name="2030002" xml:space="preserve">
+    <value>DEFAULT_ACCOUNT_NOT_SET</value>
+  </data>
+  <data name="2040000" xml:space="preserve">
+    <value>ADDRESS_BOOK_COMMON_ERROR</value>
+  </data>
+  <data name="2040001" xml:space="preserve">
+    <value>CAN_NOT_ADDED_SELF_ACCOUNT_INTO_ADDRESS_BOOK</value>
+  </data>
+  <data name="2050000" xml:space="preserve">
+    <value>NETWORK_COMMON_ERROR</value>
+  </data>
+  <data name="2050001" xml:space="preserve">
+    <value>P2P_SERVICE_NOT_START</value>
+  </data>
+  <data name="2050002" xml:space="preserve">
+    <value>NODE_EXISTED</value>
+  </data>
+  <data name="2050003" xml:space="preserve">
+    <value>NODE_NOT_EXISTED</value>
+  </data>
+  <data name="2050004" xml:space="preserve">
+    <value>NODE_IN_THE_BLACK_LIST</value>
+  </data>
+  <data name="2050005" xml:space="preserve">
+    <value>NODE_ADDRESS_FORMAT_INVALID</value>
+  </data>
+  <data name="2050006" xml:space="preserve">
+    <value>SET_BAN_COMMAND_PARAMETER_NOT_SUPPORTED</value>
+  </data>
+  <data name="2060000" xml:space="preserve">
+    <value>BLOCK_CHAIN_COMMON_ERROR</value>
+  </data>
+  <data name="2060001" xml:space="preserve">
+    <value>SAME_HEIGHT_BLOCK_HAS_BEEN_GENERATED</value>
+  </data>
+  <data name="2060002" xml:space="preserve">
+    <value>BLOCK_DESERIALIZE_FAILED</value>
+  </data>
+  <data name="2070000" xml:space="preserve">
+    <value>SERVICE_WALLET_COMMON_ERROR</value>
+  </data>
+</root>

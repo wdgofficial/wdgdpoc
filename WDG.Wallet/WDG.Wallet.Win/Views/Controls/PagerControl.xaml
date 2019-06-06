@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WDG.Wallet.Win.Views.Controls.PagerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WDG.Wallet.Win.Views.Controls"
+             xmlns:btn="clr-namespace:WDG.Wallet.Win.CustomControls"
+             xmlns:converters="clr-namespace:WDG.Wallet.Win.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="600">
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <btn:PathButton Margin="10 0 0 0" Background="#FF3B8EFF" 
+                        BorderThickness="0" DefaultFillBrush="White" 
+                        Width="25" Height="25" 
+                        PathData="F1 M1000,1000z M0,0z M286.5,517.4L884.6,984.8C896.8,994.6,906.6,990.3,906.6,975L906.6,25C906.6,9.7,896.8,5.5,884.6,15.2L286.5,482.6C274.3,491.7,274.3,507.6,286.5,517.4L286.5,517.4z M275.5,906.6C275.5,913.3,269.4,918.8,262.7,918.8L106.3,918.8C99,918.8,93.5,914.5,93.5,907.2L93.5,90.4C93.5,83.1,99,77.6,106.3,77.6L262.7,77.6C269.4,77.6,275.5,83.1,275.5,90.4L275.5,906.6z" 
+                        Click="FirstPageClick"/>
+        <btn:PathButton Margin="10 0 0 0" Background="#FF3B8EFF" 
+                        BorderThickness="0" DefaultFillBrush="White" 
+                        Width="25" Height="25" 
+                        PathData="F1 M1000,1000z M0,0z M936,10L64,500 936,990 936,10z" 
+                        Click="PrevPageClick"/>
+        <TextBlock  Text="{Binding CurrentPage,
+                        RelativeSource={RelativeSource AncestorType={x:Type local:PagerControl}},
+                        Converter={x:Static converters:StaticConverters.PagerConverter},
+                        ConverterParameter={x:Static converters:StaticConverterParams.PagerType_CurrentPage}}"
+                   VerticalAlignment="Center" Margin="10 0"/>
+        <btn:PathButton Background="#FF3B8EFF" 
+            BorderThickness="0" DefaultFillBrush="White" 
+            Width="25" Height="25"  
+            PathData="F1 M1000,1000z M0,0z M105.7,972.8L105.7,27.2C105.7,21.1 108.9,15.3 114.6,12.2 120.2,9.1 126.9,9.4 132,12.7L886.3,485.5C891.1,488.5 894.3,493.9 894.3,500 894.3,506.1 891.1,511.5 886.3,514.5L132,987.4C126.9,990.6 120.2,991 114.6,987.9 108.9,984.7 105.7,978.8 105.7,972.8L105.7,972.8z" 
+                        Click="NextPageClick"/>
+        <btn:PathButton Background="#FF3B8EFF" Margin="10 0 0 0"
+            BorderThickness="0" DefaultFillBrush="White" 
+            Width="25" Height="25"  
+            PathData="M17.105,0 L21.635001,0 21.635001,24.5 17.105,24.5 z M0,0 L2.6224997,0 14.8725,12.25 2.6224997,24.5 2.6224997,24.497501 0,24.497501 z" 
+                        Click="LastPageClick"/>
+        <TextBlock 
+            Text="{Binding PageCount,
+                RelativeSource={RelativeSource AncestorType={x:Type local:PagerControl}},
+                Converter={x:Static converters:StaticConverters.PagerConverter},
+                ConverterParameter={x:Static converters:StaticConverterParams.PagerType_TotalPage}}"
+            VerticalAlignment="Center" Margin="10 0"/>
+    </StackPanel>
+</UserControl>

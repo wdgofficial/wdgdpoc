@@ -1,0 +1,73 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.ShellPages.ImagePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WDG.Wallet.Win.Views.ShellPages"
+      xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels.ShellPages"
+      xmlns:customcontrols="clr-namespace:WDG.Wallet.Win.CustomControls"
+      mc:Ignorable="d" 
+      Width="680" Height="350"
+      Title="ImagePage">
+    <Page.DataContext>
+        <vm:ImageViewModel/>
+    </Page.DataContext>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="257"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:TitleControl Title="{DynamicResource RequestPayPage_title}"/>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Image Height="140" Width="140" Source="{Binding QrCodePath}"/>
+            <TextBlock Text="{Binding Address}" Margin="0 20 0 0" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="#E5E5E5" Margin="20 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal">
+                    <customcontrols:PathButton
+                            PathData="{StaticResource path_btn_copyUri}" 
+                            Padding="6" Width="Auto"
+                            DefaultFillBrush="{StaticResource btn_white_normal_ContentColor}"
+                            MouseOverBrush="{StaticResource btn_white_mouseOver_ContentColor}"
+                            IsPressedBrush="{StaticResource btn_white_enable_ContentColor}"
+                            IsEnabledBrush="{StaticResource btn_white_enable_ContentColor}"  
+                            Content="{DynamicResource CopyAddress}" 
+                            BorderBrush="#D4D4D4" Background="White" BorderThickness="1" Foreground="#8C8C8C"
+                            Command="{Binding CopyAddressCommand}" Height="32" Margin="2" MinWidth="90"/>
+                    <customcontrols:PathButton
+                            PathData="{StaticResource path_btn_copyimage}"
+                            Padding="6" Width="Auto"
+                            DefaultFillBrush="{StaticResource btn_white_normal_ContentColor}"
+                            MouseOverBrush="{StaticResource btn_white_mouseOver_ContentColor}"
+                            IsPressedBrush="{StaticResource btn_white_enable_ContentColor}"
+                            IsEnabledBrush="{StaticResource btn_white_enable_ContentColor}"  
+                            Content="{DynamicResource SaveImage}" Command="{Binding SaveImageCommand}" 
+                            BorderBrush="#D4D4D4" Background="White" BorderThickness="1" Foreground="#8C8C8C"
+                            Height="32" Margin="2" MinWidth="90"/>
+                </StackPanel>
+
+                <Button Grid.Row="5" Grid.ColumnSpan="2" 
+                        Command="{Binding ClosePopupCommand}"
+                        BorderBrush="#D4D4D4" Background="White" BorderThickness="1" Foreground="#8C8C8C"
+                        Content="{DynamicResource Close}" Height="32" MinWidth="90" HorizontalAlignment="Right"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="WDG.Wallet.Win.Views.ShellPages.TitleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:WDG.Wallet.Win.CustomControls"
+             xmlns:shellPages="clr-namespace:WDG.Wallet.Win.Views.ShellPages"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="550">
+    <Border Background="#F6F7F9" CornerRadius="1 1 0 0">
+        <Grid>
+            <!--<Image Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image.Source>
+                    <DrawingImage>
+                        <DrawingImage.Drawing>
+                            <DrawingGroup ClipGeometry="M0,0 V20 H20 V0 H0 Z">
+                                <DrawingGroup>
+                                    <DrawingGroup>
+                                        <GeometryDrawing Brush="#FF3B8EFF">
+                                            <GeometryDrawing.Geometry>
+                                                <EllipseGeometry RadiusX="9.9062" RadiusY="9.7538" Center="9.9062,10" />
+                                            </GeometryDrawing.Geometry>
+                                        </GeometryDrawing>
+                                    </DrawingGroup>
+                                    <GeometryDrawing Brush="#FFFFFFFF" Geometry="F0 M20,20z M0,0z M15.1364946,13.1297816L9.9063597,16.1157157 9.88330136,13.0270562 12.7844847,11.3667631 12.7844847,5.29887951 15.3284273,6.65513193C15.4340322,6.71143309,15.5000019,6.82136293,15.5000019,6.94103841L15.5000019,12.8071458C15.5000019,12.9860861 15.3549422,13.1311458 15.1760019,13.1311458 15.1715074,13.1311458 15.1670134,13.1310523 15.1625228,13.1308653L15.1364946,13.1297816z M6.96551915,8.51055801L6.96551915,14.5784416 4.42157655,13.2221891C4.31597164,13.165888,4.25000191,13.0559581,4.25000191,12.9362827L4.25000191,7.16947319C4.25000191,7.01691058 4.35544715,6.88897603 4.49743374,6.85457342 4.52502757,6.81246784 4.56250986,6.77665551 4.60777404,6.75081375L9.84364412,3.76160536 9.86670245,6.85026488 6.96551915,8.51055801z M7.4688414,9.04230145L9.80898215,7.63551766C9.85499073,7.60785945 9.91470946,7.62273535 9.94236767,7.66874393 9.95095106,7.68302212 9.95572054,7.6992668 9.95621837,7.71591893L10.0006532,9.20221543C10.0017036,9.23735061,9.9837025,9.27031542,9.95357621,9.28842594L7.61343546,10.6952097C7.56742688,10.7228679 7.50770815,10.707992 7.48004994,10.6619835 7.47146655,10.6477053 7.46669707,10.6314606 7.46619923,10.6148085L7.42176444,9.12851197C7.42071402,9.09337679,7.43871511,9.06041198,7.4688414,9.04230145z M9.79642761,10.9755435L12.1365684,9.56875976C12.1825769,9.54110154 12.2422957,9.55597745 12.2699539,9.60198602 12.2785373,9.61626421 12.2833067,9.6325089 12.2838046,9.64916102L12.3282394,11.1354575C12.3292898,11.1705927,12.3112887,11.2035575,12.2811624,11.221668L9.94102166,12.6284518C9.89501309,12.65611 9.83529436,12.6412341 9.80763614,12.5952256 9.79905276,12.5809474 9.79428328,12.5647027 9.79378544,12.5480506L9.74935064,11.0617541C9.74830023,11.0266189,9.76630132,10.9936541,9.79642761,10.9755435z" />
+                                </DrawingGroup>
+                            </DrawingGroup>
+                        </DrawingImage.Drawing>
+                    </DrawingImage>
+                </Image.Source>
+            </Image>-->
+            <Image Width="20" Height="20" Margin="15 0 0 0" Source="../../images/logo.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Title,RelativeSource={RelativeSource AncestorType=shellPages:TitleControl}}" 
+                       Margin="40 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                       FontFamily="{StaticResource GlobalFontFamily}" FontSize="14" Foreground="#504F56 "/>
+
+            <controls:ImageButton Width="30" Height="30" 
+                                  Visibility="{Binding CloseIsWord,RelativeSource={RelativeSource AncestorType=shellPages:TitleControl},Converter={StaticResource _booleanToVisibilityConverter},ConverterParameter=reverse}"
+                                  Background="Transparent" Margin="0 0 20 0"
+                                  Source="../../images/windows/dialog_close.png" HorizontalAlignment="Right" 
+                                  Command="{Binding DataContext.ClosePopupCommand,RelativeSource={RelativeSource AncestorType=Page}}"/>
+
+            <Button HorizontalAlignment="Right" 
+                    Visibility="{Binding CloseIsWord,RelativeSource={RelativeSource AncestorType=shellPages:TitleControl},Converter={StaticResource _booleanToVisibilityConverter}}"
+                    Content="{Binding CloseWord,RelativeSource={RelativeSource AncestorType=shellPages:TitleControl}}"
+                    Command="{Binding DataContext.ClosePopupCommand,RelativeSource={RelativeSource AncestorType=Page}}"
+                    Background="Transparent" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="14" BorderThickness="0" Margin="0 0 20 0" Foreground="#158CFB"/>
+        </Grid>
+    </Border>
+</UserControl>

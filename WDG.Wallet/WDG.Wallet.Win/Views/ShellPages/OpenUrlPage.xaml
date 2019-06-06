@@ -1,0 +1,69 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.ShellPages.OpenUrlPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels.ShellPages"
+        xmlns:local="clr-namespace:WDG.Wallet.Win.Views.ShellPages"
+      xmlns:rules="clr-namespace:WDG.Wallet.Win.ValidationRules"
+      mc:Ignorable="d"
+        Height="270" Width="550">
+    <Page.DataContext>
+        <vm:OpenUrlViewModel/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        
+    </Page.Resources>
+    
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <local:TitleControl Title="{DynamicResource page_OpenUrl}"/>
+
+        <Border Grid.Row="1" CornerRadius="0 0 1 1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="URI" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="40 10 20 10"/>
+
+                <TextBox Grid.Row="1" x:Name="addressBox"
+                         Style="{StaticResource WarkTextBoxStyle}" Tag="{DynamicResource tb_tooltip_inputUrl}" 
+                         VerticalContentAlignment="Center" Grid.Column="1" Height="34" Width="340" Margin="20 10" HorizontalAlignment="Left">
+                    <TextBox.Text>
+                        <Binding Path="Url" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+                    </TextBox.Text>
+                </TextBox>
+
+                <Canvas Grid.Row="2" Grid.Column="1" Visibility="{Binding IsUrlError,Converter={StaticResource _booleanToVisibilityConverter}}">
+                    <Image Width="14" Height="14" Margin="20 10" Source="../../images/page/error.png"/>
+                    <TextBlock Text="{DynamicResource Error_Address}" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40 10"/>
+                </Canvas>
+
+                <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" 
+                        MinWidth="80" Foreground="White" MinHeight="32" Command="{Binding OkCommand}"
+                        Content="{StaticResource btn_OK}" Background="#3B8EFF">
+                    <Button.CommandParameter>
+                        <MultiBinding Converter="{StaticResource _validationConverter}">
+                            <MultiBinding.Bindings>
+                                <Binding ElementName="addressBox"/>
+                            </MultiBinding.Bindings>
+                        </MultiBinding>
+                    </Button.CommandParameter>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

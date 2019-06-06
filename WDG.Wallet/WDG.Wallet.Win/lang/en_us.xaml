@@ -1,0 +1,358 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="OK">OK</sys:String>
+    <sys:String x:Key="Cancel">Cancel</sys:String>
+
+    <!--Menu-Options-->
+    <sys:String x:Key="Main">Main(M)</sys:String>
+    <sys:String x:Key="Wallet">Wallet(A)</sys:String>
+    <sys:String x:Key="Network">Network(N)</sys:String>
+    <sys:String x:Key="Window">Window(W)</sys:String>
+    <sys:String x:Key="Display">Display(D)</sys:String>
+
+    <sys:String x:Key="Main_Title">WDG－Wallet</sys:String>
+
+    <!--OverviewPage-->
+    <sys:String x:Key="Title_Over">Balance</sys:String>
+    <sys:String x:Key="Title_CanUseOver">Available:</sys:String>
+    <sys:String x:Key="Title_WaitingOver">Pending：</sys:String>
+    <sys:String x:Key="Title_Total">Total：</sys:String>
+
+    <sys:String x:Key="Title_RecentTrade">Recent transactions record</sys:String>
+
+    <!--SendPage-->
+    <sys:String x:Key="Title_Payfor">Pay To</sys:String>
+    <sys:String x:Key="Title_Tag">Label</sys:String>
+    <sys:String x:Key="Title_Amount">Payment Amount</sys:String>
+    <sys:String x:Key="Title_ArrivalAmount">Arrival amount</sys:String>
+
+    <sys:String x:Key="Title_DeductTradefee">Subtract the transaction fee from the amount</sys:String>
+    <sys:String x:Key="Title_UseBalance">Use Balance</sys:String>
+
+    <sys:String x:Key="Tooltip_FindOldUrl">Choose previously address</sys:String>
+    <sys:String x:Key="Tooltip_ParseUrl">Paste address from clipboard</sys:String>
+    <sys:String x:Key="Tooltip_RemoveItem">Remove this entry</sys:String>
+
+    <sys:String x:Key="Title_Tradefee">Transaction Fee</sys:String>
+    <sys:String x:Key="Btn_Chose">Choose...</sys:String>
+    <sys:String x:Key="Btn_Send">Send</sys:String>
+    <sys:String x:Key="Btn_SendSetting">Send Setting</sys:String>
+    <sys:String x:Key="Btn_ClearAll">Clear All</sys:String>
+    <sys:String x:Key="Btn_AddPayee">Add Recipient</sys:String>
+    <sys:String x:Key="Title_Over1">Balance:</sys:String>
+
+    <sys:String x:Key="Tb_InputUriMsg">Enter a WDG address</sys:String>
+    <sys:String x:Key="Tb_InputTagMsg">Enter a label for this address</sys:String>
+    <!--and save it to you address book-->
+
+    <!--ReceivePage-->
+    <sys:String x:Key="Desp_ReceivePage">Use this from to rquest payments. All fields are optional</sys:String>
+    <sys:String x:Key="Btn_RequestPay">Request payment</sys:String>
+    <sys:String x:Key="Btn_Clear">Clear</sys:String>
+
+    <!--TextBox水印-->
+    <sys:String x:Key="tb_tooltip_inputUrl">Enter or paste a payment request</sys:String>
+
+
+    <!--Button 词条-->
+    <sys:String x:Key="btn_OK">OK</sys:String>
+    <sys:String x:Key="btn_Cancel">Cancel</sys:String>
+
+    <!--Page title-->
+    <sys:String x:Key="page_OpenUrl">Open URI</sys:String>
+    <sys:String x:Key="page_PwdSetting">Change passphrase</sys:String>
+    <sys:String x:Key="page_option">Option</sys:String>
+
+    <sys:String x:Key="tb_newPwd">New password</sys:String>
+    <sys:String x:Key="tb_confirmPwd">Repeat password</sys:String>
+
+    <sys:String x:Key="page_pwdSetting_tooltip1">Enter your new wallet password</sys:String>
+    <sys:String x:Key="page_pwdSetting_tooltip2">Password should be more than 8 random characters, and at least two different characters</sys:String>
+    <sys:String x:Key="page_pwdSetting_checkbox_viewPwd">Show password</sys:String>
+
+    <sys:String x:Key="page_languageSetting_cb_choseLanguage">Language Switch</sys:String>
+    <sys:String x:Key="page_Option_cb_choseModel">Wallet Model</sys:String>
+    <sys:String x:Key="page_Option_cbi_default">Default</sys:String>
+    <sys:String x:Key="page_Option_cbi_profession">Profession</sys:String>
+
+    <sys:String x:Key="cbi_alldate">All</sys:String>
+    <sys:String x:Key="cbi_today">Today</sys:String>
+    <sys:String x:Key="cbi_thisWeek">This week</sys:String>
+    <sys:String x:Key="cbi_thisMon">This Month</sys:String>
+    <sys:String x:Key="cbi_prevMon">Previous Month</sys:String>
+    <sys:String x:Key="cbi_toyear">This year</sys:String>
+    <sys:String x:Key="cbi_range">Range...</sys:String>
+
+    <sys:String x:Key="cbi_alltype">All</sys:String>
+    <sys:String x:Key="cbi_receive">Received with</sys:String>
+    <sys:String x:Key="cbi_pay">send to</sys:String>
+    <sys:String x:Key="cbi_payself">To youself</sys:String>
+    <sys:String x:Key="cbi_mining">Mined</sys:String>
+    <sys:String x:Key="cbi_other">Other</sys:String>
+
+
+    <sys:String x:Key="page_tradeRecord_timeRange">Range</sys:String>
+    <sys:String x:Key="page_tradeRecord_export">Export</sys:String>
+    <sys:String x:Key="page_tradeRecord_state">Status</sys:String>
+    <sys:String x:Key="page_tradeRecord_time">Time</sys:String>
+    <sys:String x:Key="page_tradeRecord_type">Type</sys:String>
+    <sys:String x:Key="page_tradeRecord_tag">Label</sys:String>
+    <sys:String x:Key="page_tradeRecord_refresh">Refresh</sys:String>
+    <sys:String x:Key="page_tradeRecord_amount">Amount (WDG)</sys:String>
+
+    <sys:String x:Key="template_senditeminfo_tb_all">All</sys:String>
+
+    <sys:String x:Key="page_tradefee">Transaction Fee</sys:String>
+    <sys:String x:Key="page_fee_tbk_recommended">Recommended：0.001 WDG / kb</sys:String>
+    <sys:String x:Key="page_fee_tbk_sureTimeGoal">Comfirmation time target</sys:String>
+    <sys:String x:Key="page_fee_txb_customer">Custom</sys:String>
+    <sys:String x:Key="page_fee_rb_prompt">Only need to pay the required fee of 0.00001024 WDG / kb(Please refer to the tips when select)</sys:String>
+    <sys:String x:Key="page_fee_txb_prompt">If this option is selected, allow to pay the minimun transaction fee when transaction volume is small.Your transaction may never be confirmed when the transaction volume is too large to handle on the network</sys:String>
+
+
+    <sys:String x:Key="send">Pay to</sys:String>
+    <sys:String x:Key="generate">Mined</sys:String>
+    <sys:String x:Key="receive">Received with</sys:String>
+    <sys:String x:Key="self">To youself</sys:String>
+
+
+    <sys:String x:Key="converter_unconfirmed">Unconfirmed</sys:String>
+    <sys:String x:Key="converter_confirmed">Finish</sys:String>
+    <sys:String x:Key="converter_confirming">Confirming</sys:String>
+    <sys:String x:Key="converter_confirmFormat">ConfirmationNum</sys:String>
+    <sys:String x:Key="converter_disabled">(Disabled)</sys:String>
+
+    <!--TradeDetailMiningPage-->
+    <sys:String x:Key="TradeDetailMiningPage_title">Transaction Details－Mined</sys:String>
+    <sys:String x:Key="TradeDetailSendPage_title">Transaction Details－Pay</sys:String>
+    <sys:String x:Key="TradeDetailReceivePage_title">Transaction Details－Received</sys:String>
+    <sys:String x:Key="tradeStatus">Status：</sys:String>
+    <sys:String x:Key="tradeCategroy">Type：</sys:String>
+    <sys:String x:Key="tradeDate">Time：</sys:String>
+    <sys:String x:Key="tradeAmount">Amount：</sys:String>
+    <sys:String x:Key="tradeTxid">Transaction ID：</sys:String>
+    <sys:String x:Key="tradeTo">To：</sys:String>
+    <sys:String x:Key="tradeAddress">Address：</sys:String>
+    <sys:String x:Key="tradefee">Fee：</sys:String>
+    <sys:String x:Key="tradeInAmount">Arrival amount：</sys:String>
+
+    <sys:String x:Key="Mark">Message</sys:String>
+    <sys:String x:Key="Amount">Amount</sys:String>
+    <sys:String x:Key="tooltip_Label">Label</sys:String>
+    <sys:String x:Key="tooltip_Mark">Message</sys:String>
+    <sys:String x:Key="ClearAll">Clear All</sys:String>
+
+
+    <sys:String x:Key="Msg_Sendfailure">Failed to send</sys:String>
+    <sys:String x:Key="Msg_Sendsuccess">Sent successfully</sys:String>
+
+    <!--RequestPayPage-->
+    <sys:String x:Key="RequestPayPage_title">Request payment</sys:String>
+    <sys:String x:Key="URL">URI</sys:String>
+    <sys:String x:Key="Address">Address</sys:String>
+    <sys:String x:Key="Tag">Label</sys:String>
+
+    <sys:String x:Key="CopyAddress">Copy Address</sys:String>
+    <sys:String x:Key="CopyURL">Copy URI</sys:String>
+    <sys:String x:Key="SaveImage">Save Image...</sys:String>
+    <sys:String x:Key="Close">Close</sys:String>
+
+
+    <!--InputWalletPwdPage-->
+    <sys:String x:Key="InputWalletPwdPage_title">Enter wallet password</sys:String>
+    <sys:String x:Key="InputWalletPwdPage_tooltip">Please enter your wallet password to send WDG to the other</sys:String>
+    <sys:String x:Key="InputWalletPwdPage_inputPwd">Enter password</sys:String>
+    <sys:String x:Key="InputWalletPwdPage_showPwd">Show password</sys:String>
+
+    <!--AboutPage-->
+    <sys:String x:Key="AboutPage_title">About WDG</sys:String>
+
+    <sys:String x:Key="messagePage_title_confirmPwd">Confirm wallet password</sys:String>
+    <sys:String x:Key="messagePage_title_confirmPwd_cation">If you forget your wallet password, you will lose all your WDG</sys:String>
+    <sys:String x:Key="messagePage_title_confirmPwd_cation2">Are you sure you want to encrypt your wallet password</sys:String>
+
+
+    <sys:String x:Key="page_PwdSetting_EncryptedWallet">Encrypt wallet</sys:String>
+
+    <sys:String x:Key="page_EncryptedWallet_caption1">WinWallet Now is closing to complete the encryption process. Please note that the encrypted wallet cannot completely prevent malicious programs that invade your computer from stealing coins.</sys:String>
+    <sys:String x:Key="page_EncryptedWallet_caption2">Important: Instead of using the newly created encrypted wallet file, replace the backup of the old wallet file. For security, when you start using a new encrypted wallet, the backup of the old wallet file can no longer be used.</sys:String>
+
+
+    <sys:String x:Key="page_changePwd_caption1">Enter the old and new passwords for your wallet</sys:String>
+    <sys:String x:Key="page_changePwd_oldPwd">Enter password</sys:String>
+    <sys:String x:Key="page_changePwd_okCaption">Password reset completedly</sys:String>
+
+
+    <sys:String x:Key="config_File">File(F)</sys:String>
+    <sys:String x:Key="config_openUri">Open URI</sys:String>
+    <sys:String x:Key="config_backupWallet">Backup Wallet</sys:String>
+
+    <sys:String x:Key="config_setting">Settings(S)</sys:String>
+    <sys:String x:Key="config_encryptWallet">Encrypt Wallet</sys:String>
+    <sys:String x:Key="config_changePwd">Change password</sys:String>
+    <sys:String x:Key="config_option">Option</sys:String>
+
+    <sys:String x:Key="config_help">Help(H)</sys:String>
+    <sys:String x:Key="config_aboutFiiicoin">About WDG</sys:String>
+
+    <sys:String x:Key="config_overview">Overview</sys:String>
+    <sys:String x:Key="config_Send">Send</sys:String>
+    <sys:String x:Key="config_receive">Receive</sys:String>
+    <sys:String x:Key="config_transactions">Transactions</sys:String>
+
+    <sys:String x:Key="config_overview_tooltip">Show wallet overview</sys:String>
+    <sys:String x:Key="config_Send_tooltip">Send coin to a WDG address</sys:String>
+    <sys:String x:Key="config_receive_tooltip">Request payments(Generates QR codes and WDG:urls)</sys:String>
+    <sys:String x:Key="config_transactions_tooltip">View transaction history</sys:String>
+
+
+    <sys:String x:Key="TimeGoalItems1">2 minute（s） 2 blocks</sys:String>
+    <sys:String x:Key="TimeGoalItems2">4 minute（s） 4 blocks</sys:String>
+    <sys:String x:Key="TimeGoalItems3">6 minute（s） 6 blocks</sys:String>
+    <sys:String x:Key="TimeGoalItems4">12 minute（s） 12 blocks</sys:String>
+    <sys:String x:Key="TimeGoalItems5">12 minute（s） 24 blocks</sys:String>
+    <sys:String x:Key="TimeGoalItems6">48 minute（s） 48 blocks</sys:String>
+    <sys:String x:Key="TimeGoalItems7">2.4 hour（s） 144 blocks</sys:String>
+
+    <sys:String x:Key="Version_T">Version :</sys:String>
+    <sys:String x:Key="WalletLoading">Loading wallet, please wait patiently...</sys:String>
+    <sys:String x:Key="ServiceStarting">Launching wallet service, please wait patiently...</sys:String>
+    <sys:String x:Key="NetConnectting">Connecting remote node, please wait patiently...</sys:String>
+
+    <sys:String x:Key="SyncProgress">Synchronization progress</sys:String>
+    <sys:String x:Key="synchronizing">Synchronizing</sys:String>
+    <sys:String x:Key="remainingblocksCount">Left block height</sys:String>
+    <sys:String x:Key="stratDataTime">Update Start Time</sys:String>
+    <sys:String x:Key="Rate">Rate</sys:String>
+    <sys:String x:Key="STRS">Remaining Time</sys:String>
+
+    <sys:String x:Key="ConfirmSendTitle">Confirm</sys:String>
+    <sys:String x:Key="ConfirmSend">Confirm sending?</sys:String>
+    <sys:String x:Key="ToLable">To Label</sys:String>
+
+    <sys:String x:Key="SendAddress">Send Address</sys:String>
+    <sys:String x:Key="ReceiveAddress">Receive Address</sys:String>
+
+    <sys:String x:Key="PayAddress">Pay Address</sys:String>
+    <sys:String x:Key="PayAddressT">This address is the address you want to pay. Before you pay, please be sure to check if the address is correct.</sys:String>
+    <sys:String x:Key="Create">Create</sys:String>
+    <sys:String x:Key="CopyLabel">Copy Label</sys:String>
+    <sys:String x:Key="Delete">Delete</sys:String>
+    <sys:String x:Key="Edit">Edit</sys:String>
+    <sys:String x:Key="Choose">Choose</sys:String>
+
+    <sys:String x:Key="CreatePayUrl">Create payment address</sys:String>
+    <sys:String x:Key="EditPayUrl">Edit payment address</sys:String>
+    <sys:String x:Key="AddressWartMark">Enter a WDG address</sys:String>
+    <sys:String x:Key="template_senditeminfo_tb_rule">The transaction fee will be deducted from the total amount sent, and the recipient will receive less coins than the amount entered in the input box.</sys:String>
+
+    <sys:String x:Key="config_RestoreWallet">Restore Wallet</sys:String>
+    <sys:String x:Key="encryptSucceed">Encrypted success</sys:String>
+    <sys:String x:Key="encryptFail">Encryption failed</sys:String>
+
+    <sys:String x:Key="Error_NotNull">Can not be empty!</sys:String>
+    <sys:String x:Key="Error_Password">Password must be more than 8 digits and contain numbers, letters</sys:String>
+    <sys:String x:Key="Error_PasswordDifferent">Inconsistent password entered</sys:String>
+    <sys:String x:Key="Error_NewPasswordDifferent">New password and old password must inconsistent</sys:String>
+
+    <sys:String x:Key="exportSucesses">Export successfully</sys:String>
+    <sys:String x:Key="exportFail">Failed to export</sys:String>
+
+    <sys:String x:Key="backupSucesses">Backup successfully</sys:String>
+    <sys:String x:Key="backupFail">Failed to backup</sys:String>
+
+    <sys:String x:Key="enterPwd_fail">Incorrect password</sys:String>
+    <sys:String x:Key="importSucesses">Imported success</sys:String>
+    <sys:String x:Key="importFail">Imported failed</sys:String>
+
+
+    <sys:String x:Key="CreateByReceive">Create a payment address</sys:String>
+    <sys:String x:Key="EditByReceive">Edit payment address</sys:String>
+
+    <sys:String x:Key="addSucesses">Added successfully</sys:String>
+    <sys:String x:Key="addFail">Failed to add</sys:String>
+    <sys:String x:Key="DeleteFail">Failed to delete</sys:String>
+
+    <sys:String x:Key="Error_Address">Invalid payment address</sys:String>
+    <sys:String x:Key="Error_Amount">Invalid payment amount</sys:String>
+    <sys:String x:Key="Error_Sync">Please wait for the block synchronization to complete</sys:String>
+    <sys:String x:Key="Error_OutofRange">Out of range</sys:String>
+    <sys:String x:Key="IsContainFee">Is include transaction fees</sys:String>
+
+    <sys:String x:Key="netTooltipFormat">{0}active connection(s) to WDG network {1}Click to ban web activity</sys:String>
+
+    <sys:String x:Key="page_changePwd_FailCaption">Failed to modify password</sys:String>
+
+    <sys:String x:Key="Error_Send_OverMax">The total transfer amount cannot be greater than the available balance</sys:String>
+    <sys:String x:Key="Error_Send_OverMinFee">The transfer amount cannot be less than the transaction fee</sys:String>
+
+    <sys:String x:Key="Error_Search_Address">Address Search</sys:String>
+    <sys:String x:Key="Error_Search_Amount">Amount Sent</sys:String>
+
+    <sys:String x:Key="Error_Uri">Incorrect URI format</sys:String>
+    <sys:String x:Key="days">Days</sys:String>
+    <sys:String x:Key="hours">Hours</sys:String>
+    <sys:String x:Key="minutes">Minutes</sys:String>
+    <sys:String x:Key="seconds">Seconds</sys:String>
+
+    <sys:String x:Key="Export">Export</sys:String>
+    <sys:String x:Key="ReceiveAddressT">The WDG address are used for receiving WDG, we will suggest to generate new address for each transaction</sys:String>
+    <sys:String x:Key="Error_EmptyTag">Tag not null</sys:String>
+    <sys:String x:Key="myself">myself</sys:String>
+    <sys:String x:Key="shadow">Hide</sys:String>
+    <sys:String x:Key="lastDataTime">Last data time</sys:String>
+    <sys:String x:Key="Error_enterOldPwd">Enter old password error</sys:String>
+    <sys:String x:Key="Error_NoNet">Connect to network failture</sys:String>
+    <sys:String x:Key="Error_Date">Incorrect date format</sys:String>
+
+    <sys:String x:Key="CopyAmount">Copy Amount</sys:String>
+    <sys:String x:Key="CopyTxId">Copy Transaction ID</sys:String>
+    <sys:String x:Key="addressExisted">Address has already existed</sys:String>
+    <sys:String x:Key="Error_Edit">Edit failure</sys:String>
+    <sys:String x:Key="Error_TradeAmount">(amount + fee) can not be greater than the available balance when without fee. amount can not less than fee where contains fee</sys:String>
+
+
+    <sys:String x:Key="Import_caption1">WDG wallet has been restored and needs to be closed now</sys:String>
+    <sys:String x:Key="Import_caption2">You must restart after WDG is restored in order to use it properly.</sys:String>
+
+    <sys:String x:Key="Closing_caption1">Closing WDG Wallet</sys:String>
+    <sys:String x:Key="Closing_caption2">Do not turn off the computer before this window closes</sys:String>
+
+    <sys:String x:Key="init_caption1">Fast Payment, Energy Efficient</sys:String>
+    <sys:String x:Key="init_caption2">Delegate Proof of Capacity Consensus</sys:String>
+
+    <sys:String x:Key="UpdateMsg">WDG has updated. to install lastest version at https://github.com/WinCoinX/WinCoinX/releases</sys:String>
+
+    <sys:String x:Key="setting_locktime">UnLock Time</sys:String>
+    <sys:String x:Key="setting_chooesUTXO">Choose UTXO</sys:String>
+    <sys:String x:Key="setting_chooesChooseAddress">Choose Change Address</sys:String>
+    <sys:String x:Key="setting_isenable">IsEnable</sys:String>
+
+    <sys:String x:Key="Choose_Chg_AddrPage">Choose Change Address</sys:String>
+    <sys:String x:Key="Choose_Utxo_Page">Choose UTXO</sys:String>
+    <sys:String x:Key="Choose_Chg_Addr_ToolTip">Enter tag or Account</sys:String>
+
+    <sys:String x:Key="CurrentPageFormat">Current Page:{0}</sys:String>
+    <sys:String x:Key="TotalPageFormat">Total Page:{0}</sys:String>
+    <sys:String x:Key="TotalCountFormat">Total Count:{0}</sys:String>
+
+    <sys:String x:Key="behind">{0} behind</sys:String>
+    <sys:String x:Key="yearsBehind">{0} years</sys:String>
+    <sys:String x:Key="monthsBehind">{0} month</sys:String>
+    <sys:String x:Key="weeksBehind">{0} weeks</sys:String>
+    <sys:String x:Key="daysBehind">{0} days</sys:String>
+    <sys:String x:Key="hoursBehind">{0} hours</sys:String>
+    <sys:String x:Key="minutesBehind">{0} minutes</sys:String>
+    <sys:String x:Key="secondsBehind">{0} seconds</sys:String>
+
+    <sys:String x:Key="Error_Utxo">Insufficient UTXO balance</sys:String>
+    <sys:String x:Key="MinAmount">Min Amount</sys:String>
+    <sys:String x:Key="MaxAmount">Max Amount</sys:String>
+    <sys:String x:Key="Search">Search</sys:String>
+
+    <sys:String x:Key="RefreshFormat">Refresh({0})</sys:String>
+    <sys:String x:Key="EnableSendSetting">Enable Send Setting</sys:String>
+
+    <sys:String x:Key="Error_Fee">Insufficient fee</sys:String>
+</ResourceDictionary>

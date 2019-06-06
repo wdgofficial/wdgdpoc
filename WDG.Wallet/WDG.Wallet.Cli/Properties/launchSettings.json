@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "WDG.Wallet.Cli": {
+      "commandName": "Project"
+    }
+  }
+}

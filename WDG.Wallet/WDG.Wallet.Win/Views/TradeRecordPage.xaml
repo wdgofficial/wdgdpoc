@@ -1,0 +1,238 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.TradeRecordPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels"
+      xmlns:local="clr-namespace:WDG.Wallet.Win.Views"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:validationrules="clr-namespace:WDG.Wallet.Win.ValidationRules"
+      mc:Ignorable="d" 
+      d:DesignHeight="823" d:DesignWidth="1920"
+      Title="TradeRecordPage">
+    <Page.DataContext>
+        <vm:TradeRecordViewModel/>
+    </Page.DataContext>
+    <Grid Background="#F4F6F9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ComboBox Width="200" Height="34" VerticalContentAlignment="Center" SelectedIndex="{Binding TimeSelectIndex}" Margin="20 35 0 0" VerticalAlignment="Center">
+            <ComboBoxItem Content="{DynamicResource cbi_alldate}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_today}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_thisWeek}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_thisMon}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_prevMon}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_toyear}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_range}"/>
+        </ComboBox>
+
+        <ComboBox MinWidth="120" SelectedIndex="{Binding TradeSelectIndex}" Grid.Column="1" Height="34" Width="200" VerticalContentAlignment="Center" Margin="15 35 0 0" VerticalAlignment="Center">
+            <ComboBoxItem Content="{DynamicResource cbi_alltype}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_receive}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_pay}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_payself}"/>
+            <ComboBoxItem Content="{DynamicResource cbi_mining}"/>
+        </ComboBox>
+
+        <TextBox Grid.Column="2" Style="{StaticResource WarkTextBoxStyle}" Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" Tag="{DynamicResource Error_Search_Address}" Height="34" Margin="9 35 0 0" VerticalContentAlignment="Center"/>
+
+        <TextBox Grid.Column="3" Style="{StaticResource WarkTextBoxStyle}" Tag="{DynamicResource Error_Search_Amount}" Margin="15 35 20 0" VerticalContentAlignment="Center" Height="34">
+            <TextBox.Text>
+                <Binding Path="SearchAmount" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <validationrules:DoubleRangeRule ErrorKey="Error_Amount" Min="0"/>
+                        <validationrules:RegexRule Pattern="([0-9]{1,10}(\.[0-9]{0,8})?)?" ErrorMsg="Error_Amount"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <Border Grid.Row="1" Grid.ColumnSpan="4" Margin="20 10 0 10" Visibility="{Binding IsShowTimeRange,Converter={StaticResource _booleanToVisibilityConverter}}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{DynamicResource page_tradeRecord_timeRange}" Margin="5 0 0 0" VerticalAlignment="Center"/>
+                <TextBox Tag="yyyy-mm-dd" Width="180" Margin="15 0 0 0" Height="34" VerticalContentAlignment="Center" Validation.ErrorTemplate="{StaticResource validationTemplate_border}">
+                    <TextBox.Text>
+                        <Binding Path="StartDate" StringFormat="{} {0:yyyy-MM-dd}" FallbackValue="2000-01-01" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
+                            <Binding.ValidationRules>
+                                <validationrules:RegexRule Pattern="[1-9]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])" ErrorMsg="Error_Date"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+
+                <TextBlock Text="-" Margin="10 0" VerticalAlignment="Center"/>
+                <TextBox Tag="yyyy-mm-dd" Width="180" Margin="0 0 0 0" Height="34" VerticalContentAlignment="Center" Validation.ErrorTemplate="{StaticResource validationTemplate_border}">
+                    <TextBox.Text>
+                        <Binding Path="EndDate" StringFormat="{} {0:yyyy-MM-dd}" FallbackValue="2018-10-01" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
+                            <Binding.ValidationRules>
+                                <validationrules:RegexRule Pattern="[1-9]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])" ErrorMsg="Error_Date"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+            </StackPanel>
+        </Border>
+
+        <DataGrid x:Name="UsersDataGrid" Grid.Row="2" RowHeaderWidth="0" ScrollViewer.ScrollChanged="UsersDataGrid_ScrollChanged"
+                  VerticalGridLinesBrush="#F0F2F5" BorderThickness="0" SelectionMode="Single"
+                  SelectedItem="{Binding SelectedItem}"
+                  HorizontalGridLinesBrush="#F0F2F5" RowHeight="40" Grid.ColumnSpan="4" ItemsSource="{Binding TradeRecords}" Background="White" 
+                  CanUserDeleteRows="False" VerticalContentAlignment="Center" MouseWheel="UsersDataGrid_MouseWheel"
+                  CanUserAddRows="False" IsReadOnly="True"
+                  AutoGenerateColumns="False" Margin="30 10 30 0">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type ToolTip}">
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property = "HorizontalOffset" Value="-200"/>
+                    <Setter Property = "VerticalOffset" Value="-20"/>
+                    <Setter Property = "Background" Value="Transparent"/>
+                    <Setter Property = "FontSize" Value="12"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.InputBindings>
+                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding MouseDubleClickCommand}" CommandParameter="{Binding ElementName=UsersDataGrid, Path=SelectedItem}" />
+            </DataGrid.InputBindings>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Padding" Value="10 0 0 0"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    <Setter Property="ToolTip">
+                        <Setter.Value>
+                            <Grid Height="90" Width="400" >
+                                <Path 
+                                    Opacity="0.7" Fill="#000000" Stretch="Fill"
+                                    Data="M195.325,6 L199.992,0 204.659,6 M5.6843415E-14,9 C5.6843415E-14,7.3431456 2.9847684,6 6.6666667,6 L393.33333,6 C397.01523,6 400,7.3431456 400,9 L400,87 C400,88.656852 397.01523,90 393.33333,90 L6.6666667,90 C2.9847684,90 5.6843415E-14,88.656852 5.6843415E-14,87 z"/>
+                                <Grid Margin="0 15 0 0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20 10 0 0">
+                                        <TextBlock Foreground="White" FontSize="12" Text="{Binding Payment.Category,Converter={StaticResource _categoryToStringConverter}}" VerticalAlignment="Center" Padding="0 0 0 0"/>
+                                        <TextBlock Foreground="White" FontSize="12" Text="{Binding Payment,Converter={StaticResource _paymentToMarkConverter}}" VerticalAlignment="Center" Padding="15 0 0 0"/>
+                                        <TextBlock Foreground="White" FontSize="12" Text="{Binding Payment,Converter={StaticResource _confirmationToStatusDetail}}" VerticalAlignment="Center" Padding="15 0 0 0"/>
+                                    </StackPanel>
+                                    <TextBlock Grid.Row="1" Margin="20 0 10 0" VerticalAlignment="Center" Foreground="White" FontSize="12" Text="{Binding Payment.Address}"/>
+                                </Grid>
+                            </Grid>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="Background" Value="#F7F7F7"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#F7F7F7"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.ContextMenu>
+                <ContextMenu StaysOpen="True" Style="{StaticResource rightContextMenuStyle}">
+                    <MenuItem Header="{DynamicResource CopyAddress}" Command="{Binding CopyUriCommand}" CommandParameter="address" Template="{StaticResource rightMenuItemStyle}"/>
+                    <MenuItem Header="{DynamicResource CopyLabel}" Command="{Binding CopyUriCommand}" CommandParameter="label" Template="{StaticResource rightMenuItemStyle}"/>
+                    <MenuItem Header="{DynamicResource CopyAmount}" Command="{Binding CopyUriCommand}" CommandParameter="amount" Template="{StaticResource rightMenuItemStyle}"/>
+                    <MenuItem Header="{DynamicResource CopyTxId}" Command="{Binding CopyUriCommand}" CommandParameter="txid" Template="{StaticResource rightMenuItemStyle}"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn  Width="*" ClipboardContentBinding="{Binding Payment,Converter={StaticResource _confirmationToStatusDetail}}">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="{DynamicResource page_tradeRecord_state}"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <TextBlock 
+                                    Foreground="{Binding Payment,Converter={StaticResource _confirmationToColor}}"
+                                    Text="{Binding Payment,Converter={StaticResource _confirmationToStatus}}" VerticalAlignment="Center" Padding="10 0 0 0"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="*" ClipboardContentBinding="{Binding Payment.Time,Converter={StaticResource _timestampToDateTimeConverter},ConverterParameter='yyyy-MM-dd HH:mm:ss'}">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="{DynamicResource page_tradeRecord_time}"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <TextBlock Text="{Binding Payment.Time,Converter={StaticResource _timestampToDateTimeConverter},ConverterParameter='yyyy-MM-dd HH:mm:ss'}" VerticalAlignment="Center" Padding="10 0 0 0"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="*" ClipboardContentBinding="{Binding Payment.Category,Converter={StaticResource _categoryToStringConverter}}">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="{DynamicResource page_tradeRecord_type}"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <TextBlock Text="{Binding Payment.Category,Converter={StaticResource _categoryToStringConverter}}" VerticalAlignment="Center" Padding="10 0 0 0"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="*" ClipboardContentBinding="{Binding Payment,Converter={StaticResource _paymentToMarkConverter}}">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="{DynamicResource page_tradeRecord_tag}"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <TextBlock Text="{Binding Payment,Converter={StaticResource _paymentToMarkConverter}}" VerticalAlignment="Center" Padding="10 0 0 0"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="*" ClipboardContentBinding ="{Binding Payment,Converter={StaticResource _paymentToTradeAmountConverter}}">
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="{DynamicResource page_tradeRecord_amount}"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+                                <TextBlock Text="{Binding Payment,Converter={StaticResource _paymentToTradeAmountConverter}}" Foreground="{Binding Payment,Converter={StaticResource _paymentToColorConverter}}" Padding="10 0 0 0"/>
+                                <Image Height="16" Source="../images/logo3.png" Width="16" Margin="4 0 15 0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="100" Height="34" 
+                HorizontalAlignment="Right" 
+                Command="{Binding RefreshCommand}"
+                Background="#3B8EFF" Foreground="White"
+                Margin="0 10 30 10" 
+                Content="{Binding RefreshTitle}"/>
+            
+            <Button Width="100" Height="34" 
+                HorizontalAlignment="Right" 
+                Command="{Binding ExportCommand}" CommandParameter="{Binding ElementName=UsersDataGrid}"
+                Background="#3B8EFF" Foreground="White"
+                Margin="0 10 30 10" 
+                Content="{DynamicResource page_tradeRecord_export}"/>
+        </StackPanel>
+    </Grid>
+</Page>
+
+    

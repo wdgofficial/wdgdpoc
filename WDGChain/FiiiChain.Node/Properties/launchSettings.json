@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FiiiChain.Node": {
+      "commandName": "Project",
+      "commandLineArgs": "-testnet"
+    }
+  }
+}

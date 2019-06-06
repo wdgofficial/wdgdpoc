@@ -1,0 +1,55 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.ShellPages.MessagePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels.ShellPages"
+        xmlns:local="clr-namespace:WDG.Wallet.Win.Views.ShellPages"
+        xmlns:models="clr-namespace:WDG.Wallet.Win.Models.UiModels"
+        mc:Ignorable="d"
+        Height="350" Width="550">
+    <Page.DataContext>
+        <vm:MessageViewModel/>
+    </Page.DataContext>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <local:TitleControl Title="{Binding MessagePageData.PageTitle}" CloseIsWord="{Binding MessagePageData.CloseIsWord}" CloseWord="{Binding MessagePageData.CloseWord}"/>
+
+        <Border Grid.Row="1" CornerRadius="0 0 1 1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Path Stretch="Fill" Fill="{Binding MessagePageData.IconData.Color}"
+                      Data="{Binding MessagePageData.IconData.Msg,Converter={StaticResource _stringToPathGeometryConverter}}" 
+                      HorizontalAlignment="Center" Width="50" Height="50"/>
+
+                <ItemsControl  Grid.Row="1" ItemsSource="{Binding MessagePageData.MsgItems}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="30 3" Text="{Binding Msg}" Foreground="{Binding Color}" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" 
+                            MinWidth="80" MinHeight="32" Command="{Binding OkCommand}" Margin="10 0" Background="#44CC4E"
+                            Visibility="{Binding MessagePageData.MsgBtnShowType,Converter={StaticResource _enumToVisibilityConverter},ConverterParameter={x:Static models:MsgBtnType.Ok}}"
+                            Content="{StaticResource btn_OK}"/>
+                    <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="1" 
+                            Visibility="{Binding MessagePageData.MsgBtnShowType,Converter={StaticResource _enumToVisibilityConverter},ConverterParameter={x:Static models:MsgBtnType.Cancel}}"
+                            MinWidth="80" MinHeight="32" Command="{Binding CancelCommand}" Margin="10 0" Background="#F9F9F9" Foreground="#8A8A8A" BorderBrush="#D4D4D4"
+                            Content="{StaticResource btn_Cancel}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

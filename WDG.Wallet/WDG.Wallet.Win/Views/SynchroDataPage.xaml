@@ -1,0 +1,53 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.SynchroDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels"
+      xmlns:views="clr-namespace:WDG.Wallet.Win.Views.ShellPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="280" d:DesignWidth="680"
+      Height="280" Width="680"
+      Title="SynchroDataPage">
+    <Page.DataContext>
+        <vm:SynchroDataViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <views:TitleControl Title="{DynamicResource synchronizing}" CloseIsWord="True" CloseWord="{DynamicResource shadow}"/>
+
+        <Border Grid.Row="1" CornerRadius="0 0 1 1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="20 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{DynamicResource remainingblocksCount}"/>
+                <TextBlock Grid.Row="1" Margin="20 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{DynamicResource stratDataTime}"/>
+                <TextBlock Grid.Row="2" Margin="20 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{DynamicResource Rate}"/>
+                <TextBlock Grid.Row="3" Margin="20 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{DynamicResource STRS}"/>
+
+                <TextBlock Grid.Column="1" Grid.Row="0" Margin="20 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding BlockSyncInfo.BlockLeft}"/>
+                <TextBlock Grid.Column="1" Grid.Row="1" Margin="20 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding BlockSyncInfo.StartTimeOffset,Converter={StaticResource _timestampToDateTimeConverter},ConverterParameter='yyyy-MM-dd HH:mm:ss'}"/>
+
+                <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" Margin="0,3,0,33" Grid.RowSpan="2">
+                    <TextBlock  Margin="20 10 0 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding BlockSyncInfo.Progress,StringFormat={}{0:N2} %}"/>
+                    <ProgressBar Margin="10 0 0 0" Height="20" Value="{Binding BlockSyncInfo.Progress}" Width="320"/>
+                </StackPanel>
+                <TextBlock Grid.Column="1" Grid.Row="3" Margin="20 10" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding BlockSyncInfo.TimeLeft,Converter={StaticResource _timestampToTimeRangeConverter}}"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

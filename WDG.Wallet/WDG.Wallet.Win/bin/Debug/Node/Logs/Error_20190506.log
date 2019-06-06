@@ -1,0 +1,14 @@
+2019-05-06 14:29:03,069 [1819] ERROR ConsoleLog [(null)] - Collection was modified; enumeration operation may not execute.
+System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion()
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.Contains[TSource](IEnumerable`1 source, TSource value, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.Contains[TSource](IEnumerable`1 source, TSource value)
+   at FiiiChain.Node.P2PJob.<>c__DisplayClass67_1.<saveBlockToDB>b__2(BlockMsg item) in E:\FiiiChain_WCX\FiiiChain\FiiiChain.Node\P2PJob.cs:line 1077
+   at System.Collections.Generic.List`1.RemoveAll(Predicate`1 match)
+   at FiiiChain.Node.P2PJob.saveBlockToDB(BlockMsg block) in E:\FiiiChain_WCX\FiiiChain\FiiiChain.Node\P2PJob.cs:line 1077
+2019-05-06 18:27:07,898 [17] WARN  ConsoleLog [(null)] - Find Header Height[8411] Hash In Cache 成功
+2019-05-06 18:27:28,920 [17] WARN  ConsoleLog [(null)] - Find Header Height[8409] Hash In Cache 成功
+2019-05-06 18:27:28,939 [17] WARN  ConsoleLog [(null)] - Find Header Height[8410] Hash In Cache 成功
+2019-05-06 18:27:28,950 [17] WARN  ConsoleLog [(null)] - Find Header Height[8411] Hash In Cache 成功

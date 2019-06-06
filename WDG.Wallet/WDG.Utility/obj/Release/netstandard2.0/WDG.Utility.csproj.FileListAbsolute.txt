@@ -1,0 +1,14 @@
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\bin\Release\netstandard2.0\log4net.config
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\bin\Release\netstandard2.0\WDG.Utility.deps.json
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\bin\Release\netstandard2.0\WDG.Utility.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\bin\Release\netstandard2.0\WDG.Utility.pdb
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\bin\Release\netstandard2.0\zh\WDG.Utility.resources.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.Localization.SourceFiles.FiiiCoinLocalization.resources
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.Localization.SourceFiles.FiiiCoinLocalization.zh.resources
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.csproj.GenerateResource.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.csproj.CoreCompileInputs.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.AssemblyInfoInputs.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.AssemblyInfo.cs
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\zh\WDG.Utility.resources.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Utility\obj\Release\netstandard2.0\WDG.Utility.pdb

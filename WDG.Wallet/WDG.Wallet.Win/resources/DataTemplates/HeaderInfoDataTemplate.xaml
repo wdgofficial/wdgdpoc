@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:models="clr-namespace:WDG.Wallet.Win.Models"
+                    xmlns:controls="clr-namespace:WDG.Wallet.Win.CustomControls"
+                    xmlns:local="clr-namespace:WDG.Wallet.Win">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Converters.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <DataTemplate DataType="{x:Type models:HeaderInfo}">
+        <controls:TogglePathButton 
+            BorderThickness="0 0 1 0"
+            BorderBrush="#264555"
+            PathData="{Binding Icon,Converter={StaticResource _stringToPathGeometryConverter}}"
+            Content="{Binding Header}" 
+            Background="Transparent"
+            Width="160" 
+            Height="{Binding Height,RelativeSource={RelativeSource AncestorType=TabControl}}"
+            IsChecked="{Binding IsSelected}"  
+            ToolTip="{Binding Description}"
+            Command="{Binding DataContext.TabItemCheckedCommand,RelativeSource={RelativeSource AncestorType=local:MainPage}}"
+            CommandParameter="{Binding}"/>
+    </DataTemplate>
+</ResourceDictionary>

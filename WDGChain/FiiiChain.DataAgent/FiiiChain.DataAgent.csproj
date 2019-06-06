@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Configurations>Debug;Release;Pro</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AsyncUdpEventArgs.cs" />
+    <Compile Remove="AsyncUdpState.cs" />
+    <Compile Remove="BlockPool.cs" />
+    <Compile Remove="BlockPoolItem.cs" />
+    <Compile Remove="P2PNode.cs" />
+    <Compile Remove="P2PSendMessage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FiiiChain.Consensus\FiiiChain.Consensus.csproj" />
+    <ProjectReference Include="..\FiiiChain.Data\FiiiChain.Data.csproj" />
+    <ProjectReference Include="..\FiiiChain.IModules\FiiiChain.IModules.csproj" />
+    <ProjectReference Include="..\FiiiChain.Messages\FiiiChain.Messages.csproj" />
+    <ProjectReference Include="..\FiiiChain.TempData\FiiiChain.TempData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

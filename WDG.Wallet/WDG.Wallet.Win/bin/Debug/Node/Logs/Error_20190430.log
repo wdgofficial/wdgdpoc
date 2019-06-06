@@ -1,0 +1,30 @@
+2019-04-30 16:57:27,297 [8] ERROR ConsoleLog [(null)] - 远程主机强迫关闭了一个现有的连接。
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.EndReceiveFrom(IAsyncResult asyncResult, EndPoint& endPoint)
+   at System.Net.Sockets.UdpClient.EndReceive(IAsyncResult asyncResult, IPEndPoint& remoteEP)
+   at FiiiChain.DataAgent.P2P.receiveDataAsync(IAsyncResult ar) in E:\FiiiChain_WCX\FiiiChain\FiiiChain.DataAgent\P2P.cs:line 989
+2019-04-30 17:01:35,444 [131] ERROR ConsoleLog [(null)] - 远程主机强迫关闭了一个现有的连接。
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.EndReceiveFrom(IAsyncResult asyncResult, EndPoint& endPoint)
+   at System.Net.Sockets.UdpClient.EndReceive(IAsyncResult asyncResult, IPEndPoint& remoteEP)
+   at FiiiChain.DataAgent.P2P.receiveDataAsync(IAsyncResult ar) in E:\FiiiChain_WCX\FiiiChain\FiiiChain.DataAgent\P2P.cs:line 989
+2019-04-30 17:05:38,490 [242] ERROR ConsoleLog [(null)] - 远程主机强迫关闭了一个现有的连接。
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.EndReceiveFrom(IAsyncResult asyncResult, EndPoint& endPoint)
+   at System.Net.Sockets.UdpClient.EndReceive(IAsyncResult asyncResult, IPEndPoint& remoteEP)
+   at FiiiChain.DataAgent.P2P.receiveDataAsync(IAsyncResult ar) in E:\FiiiChain_WCX\FiiiChain\FiiiChain.DataAgent\P2P.cs:line 989
+2019-04-30 17:09:45,432 [308] ERROR ConsoleLog [(null)] - 远程主机强迫关闭了一个现有的连接。
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.EndReceiveFrom(IAsyncResult asyncResult, EndPoint& endPoint)
+   at System.Net.Sockets.UdpClient.EndReceive(IAsyncResult asyncResult, IPEndPoint& remoteEP)
+   at FiiiChain.DataAgent.P2P.receiveDataAsync(IAsyncResult ar) in E:\FiiiChain_WCX\FiiiChain\FiiiChain.DataAgent\P2P.cs:line 989
+2019-04-30 17:13:37,116 [21] ERROR ConsoleLog [(null)] - 远程主机强迫关闭了一个现有的连接。
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.EndReceiveFrom(IAsyncResult asyncResult, EndPoint& endPoint)
+   at System.Net.Sockets.UdpClient.EndReceive(IAsyncResult asyncResult, IPEndPoint& remoteEP)
+   at FiiiChain.DataAgent.P2P.receiveDataAsync(IAsyncResult ar) in E:\FiiiChain_WCX\FiiiChain\FiiiChain.DataAgent\P2P.cs:line 989

@@ -1,0 +1,66 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.ShellPages.OptionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels.ShellPages"
+      xmlns:local="clr-namespace:WDG.Wallet.Win.Views.ShellPages"
+      mc:Ignorable="d"
+      Height="290" Width="550">
+    <Page.DataContext>
+        <vm:OptionViewModel/>
+    </Page.DataContext>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <local:TitleControl Title="{DynamicResource page_option}"/>
+
+        <Border Grid.Row="1" CornerRadius="0 0 1 1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="{DynamicResource page_Option_cb_choseModel}" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="40 10 20 10"/>
+                
+                <TextBlock Text="{DynamicResource page_languageSetting_cb_choseLanguage}" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="40 10 20 10"/>
+
+
+                <ComboBox Grid.Row="1" Grid.Column="1" SelectedIndex="{Binding ModelSelectedIndex}" VerticalContentAlignment="Center" 
+                          Padding="10 0 0 0"
+                          Height="34" Width="340" Margin="20 10" HorizontalAlignment="Left">
+                    <ComboBoxItem Content="{DynamicResource page_Option_cbi_default}"/>
+                    <ComboBoxItem Content="{DynamicResource page_Option_cbi_profession}"/>
+                </ComboBox>
+
+                <ComboBox Grid.Row="2" Grid.Column="1" SelectedIndex="{Binding SelectedIndex}" VerticalContentAlignment="Center" 
+                          Padding="10 0 0 0"
+                          Height="34" Width="340" Margin="20 10" HorizontalAlignment="Left">
+                    <ComboBoxItem>简体中文</ComboBoxItem>
+                    <ComboBoxItem>English</ComboBoxItem>
+                </ComboBox>
+
+
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 10 0 0">
+                    <Button BorderThickness="0" 
+                        MinWidth="80" Foreground="White" Height="32"  Margin="10"
+                        Content="{DynamicResource btn_OK}" Background="#44CC4E" Command="{Binding OkCommand}"/>
+
+                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="#D4D4D4"
+                        MinWidth="80" Foreground="#8C8C8C" Height="32" Margin="10" 
+                        Content="{DynamicResource btn_Cancel}" Background="White" Command="{Binding CancelCommand}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

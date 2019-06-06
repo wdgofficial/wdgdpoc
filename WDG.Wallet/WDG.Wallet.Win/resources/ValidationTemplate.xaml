@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Geometrys.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <ControlTemplate x:Key="validationTemplate">
+        <DockPanel>
+            <AdornedElementPlaceholder/>
+            <Grid Width="30" Height="30" Margin="5 0 0 0" VerticalAlignment="Center">
+                <Path Stretch="Fill" Margin="7" Data="{StaticResource path_tooltip_warming}" 
+                      Fill="Red" 
+                      ToolTip="{Binding [0].ErrorContent}"/>
+            </Grid>
+        </DockPanel>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="validationTemplate_border">
+        <DockPanel LastChildFill="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <AdornedElementPlaceholder Grid.ColumnSpan="2"/>
+                <Border BorderThickness="1" BorderBrush="Red" Grid.ColumnSpan="2" Background="{x:Null}"/>
+
+                <Path ToolTip="{Binding [0].ErrorContent}" VerticalAlignment="Top" Grid.Column="1"
+                          Data="M0,0 10,0 10,10z" Fill="Red" Stretch="Fill" Width="12" Height="12"
+                          />
+            </Grid>
+        </DockPanel>
+    </ControlTemplate>
+</ResourceDictionary>

@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:converters="clr-namespace:WDG.Wallet.Win.Converters"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <converters:PaymentToColorConverter x:Key="_paymentToColorConverter"/>
+    <converters:PaymentToTradeAmountConverter x:Key="_paymentToTradeAmountConverter"/>
+    <converters:IsNullConverter x:Key="_isNullConverter"/>
+    <converters:BoolsToBoolMultiConverter x:Key="_boolsToBoolMultiConverter"/>
+    <converters:BooleanToVisibilityConverter x:Key="_booleanToVisibilityConverter"/>
+    <converters:CategoryToStringConverter x:Key="_categoryToStringConverter"/>
+    <converters:ConfirmationToStatus x:Key="_confirmationToStatus"/>
+    <converters:LongToDoubleConverter x:Key="_longToDoubleConverter"/>
+    <converters:DateToStringConverter x:Key="_dateToStringConverter"/>
+    <converters:TimestampToDateTimeConverter x:Key="_timestampToDateTimeConverter"/>
+    <converters:PaymentToMarkConverter x:Key="_paymentToMarkConverter"/>
+    <converters:ConfirmationToStatusDetail x:Key="_confirmationToStatusDetail"/>
+    <converters:ConfirmationToColor x:Key="_confirmationToColor"/>
+    <converters:StringToPathGeometryConverter x:Key="_stringToPathGeometryConverter"/>
+    <converters:IntCompareToVisibilityConverter x:Key="_intCompareToVisibilityConverter"/>
+    <converters:UrlInfoModeToTitleConverter x:Key="_urlInfoModeToTitleConverter"/>
+
+    <converters:ValidationConverter x:Key="_validationConverter"/>
+    <converters:CompareToVisibilityConverter x:Key="_compareToVisibilityConverter"/>
+    <converters:TimestampToTimeRangeConverter x:Key="_timestampToTimeRangeConverter"/>
+
+    <converters:EnumToVisibilityConverter x:Key="_enumToVisibilityConverter"/>
+    
+    <converters:ListCountToEnableConverter x:Key="_listCountToEnableConverter"/>
+    <converters:ListCountMoreThanToEnableConverter x:Key="_listCountMoreThanToEnableConverter"/>
+    <converters:ListCountLessThanToEnableConverter x:Key="_listCountLessThanToEnableConverter"/>
+
+    <converters:SubStringConverter x:Key="_subStringConverter"/>
+    <converters:BoolToPathGeometryConverter x:Key="_boolToPathGeometryConverter"/>
+    <converters:BoolToStringGeometryConverter x:Key="_boolToStringGeometryConverter"/>
+    <converters:NullToValueConverter x:Key="_nullToValueConverter"/>
+</ResourceDictionary>

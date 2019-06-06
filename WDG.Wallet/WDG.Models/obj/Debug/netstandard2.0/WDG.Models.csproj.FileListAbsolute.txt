@@ -1,0 +1,8 @@
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\bin\Debug\netstandard2.0\WDG.Models.deps.json
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\bin\Debug\netstandard2.0\WDG.Models.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\bin\Debug\netstandard2.0\WDG.Models.pdb
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\obj\Debug\netstandard2.0\WDG.Models.csproj.CoreCompileInputs.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\obj\Debug\netstandard2.0\WDG.Models.AssemblyInfoInputs.cache
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\obj\Debug\netstandard2.0\WDG.Models.AssemblyInfo.cs
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\obj\Debug\netstandard2.0\WDG.Models.dll
+G:\Grandeur\FiiiChain_WDG\WDG.Wallet\WDG.Models\obj\Debug\netstandard2.0\WDG.Models.pdb

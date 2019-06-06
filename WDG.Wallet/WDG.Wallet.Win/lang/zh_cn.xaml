@@ -1,0 +1,364 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="OK">确定</sys:String>
+    <sys:String x:Key="Cancel">取消</sys:String>
+
+    <!--Menu-Options-->
+    <sys:String x:Key="Main">主要(M)</sys:String>
+    <sys:String x:Key="Wallet">钱包(A)</sys:String>
+    <sys:String x:Key="Network">网络(N)</sys:String>
+    <sys:String x:Key="Window">窗口(W)</sys:String>
+    <sys:String x:Key="Display">显示(D)</sys:String>
+
+    <sys:String x:Key="Main_Title">WDG－钱包</sys:String>
+
+    <!--OverviewPage-->
+    <sys:String x:Key="Title_Over">余额</sys:String>
+    <sys:String x:Key="Title_CanUseOver">可使用的余额：</sys:String>
+    <sys:String x:Key="Title_WaitingOver">等待中的余额：</sys:String>
+    <sys:String x:Key="Title_Total">总额：</sys:String>
+
+    <sys:String x:Key="Title_RecentTrade">最近交易记录</sys:String>
+
+    <!--SendPage-->
+    <sys:String x:Key="Title_Payfor">付给</sys:String>
+    <sys:String x:Key="Title_Tag">标签</sys:String>
+    <sys:String x:Key="Title_Amount">发送金额</sys:String>
+    <sys:String x:Key="Title_ArrivalAmount">到账金额</sys:String>
+
+    <sys:String x:Key="Title_DeductTradefee">从金额中减去交易费</sys:String>
+    <sys:String x:Key="Title_UseBalance">使用可用余额</sys:String>
+
+    <sys:String x:Key="Tooltip_FindOldUrl">选择以前用过的地址</sys:String>
+    <sys:String x:Key="Tooltip_ParseUrl">从粘贴板粘贴地址</sys:String>
+    <sys:String x:Key="Tooltip_RemoveItem">移除此项</sys:String>
+
+    <sys:String x:Key="Title_Tradefee">交易费用</sys:String>
+    <sys:String x:Key="Btn_Chose">选择...</sys:String>
+    <sys:String x:Key="Btn_SendSetting">发送设置</sys:String>
+    <sys:String x:Key="Btn_Send">发送</sys:String>
+    <sys:String x:Key="Btn_ClearAll">清除所有</sys:String>
+    <sys:String x:Key="Btn_AddPayee">添加收款人</sys:String>
+    <sys:String x:Key="Title_Over1">余额：</sys:String>
+
+    <sys:String x:Key="Tb_InputUriMsg">请输入一个WDG地址</sys:String>
+    <sys:String x:Key="Tb_InputTagMsg">输入一个标签</sys:String>
+
+    <!--ReceivePage-->
+    <sys:String x:Key="Desp_ReceivePage">使用此表单付款，所有字段都是可选</sys:String>
+    <sys:String x:Key="Btn_RequestPay">请求付款</sys:String>
+    <sys:String x:Key="Btn_Clear">清除</sys:String>
+
+    <!--TextBox水印-->
+    <sys:String x:Key="tb_tooltip_inputUrl">输入或者粘贴付款请求</sys:String>
+
+
+    <!--Button 词条-->
+    <sys:String x:Key="btn_OK">确定</sys:String>
+    <sys:String x:Key="btn_Cancel">取消</sys:String>
+
+    <!--Page title-->
+    <sys:String x:Key="page_OpenUrl">打开URI</sys:String>
+    <sys:String x:Key="page_PwdSetting">密码设置</sys:String>
+    <sys:String x:Key="page_option">选项</sys:String>
+
+    <sys:String x:Key="tb_newPwd">新密码</sys:String>
+    <sys:String x:Key="tb_confirmPwd">确认密码</sys:String>
+
+    <sys:String x:Key="page_pwdSetting_tooltip1">请输入钱包的新密码</sys:String>
+    <sys:String x:Key="page_pwdSetting_tooltip2">密码请用8个以上随机字符，并且是至少两种以上不同字符</sys:String>
+    <sys:String x:Key="page_pwdSetting_checkbox_viewPwd">显示密码</sys:String>
+
+    <sys:String x:Key="page_languageSetting_cb_choseLanguage">选择语言</sys:String>
+    <sys:String x:Key="page_Option_cb_choseModel">钱包模式</sys:String>
+    <sys:String x:Key="page_Option_cbi_default">默认</sys:String>
+    <sys:String x:Key="page_Option_cbi_profession">专业版</sys:String>
+
+
+    <sys:String x:Key="cbi_alldate">全部日期</sys:String>
+    <sys:String x:Key="cbi_today">今天</sys:String>
+    <sys:String x:Key="cbi_thisWeek">这星期</sys:String>
+    <sys:String x:Key="cbi_thisMon">这个月</sys:String>
+    <sys:String x:Key="cbi_prevMon">上个月</sys:String>
+    <sys:String x:Key="cbi_toyear">今年</sys:String>
+    <sys:String x:Key="cbi_range">指定范围</sys:String>
+
+    <sys:String x:Key="cbi_alltype">全部类型</sys:String>
+    <sys:String x:Key="cbi_receive">收款</sys:String>
+    <sys:String x:Key="cbi_pay">付款</sys:String>
+    <sys:String x:Key="cbi_payself">给自己</sys:String>
+    <sys:String x:Key="cbi_mining">挖矿所得</sys:String>
+    <sys:String x:Key="cbi_other">其它</sys:String>
+
+
+    <sys:String x:Key="page_tradeRecord_timeRange">时间范围</sys:String>
+    <sys:String x:Key="page_tradeRecord_export">导出</sys:String>
+    <sys:String x:Key="page_tradeRecord_state">状态</sys:String>
+    <sys:String x:Key="page_tradeRecord_time">时间</sys:String>
+    <sys:String x:Key="page_tradeRecord_type">类型</sys:String>
+    <sys:String x:Key="page_tradeRecord_tag">标签</sys:String>
+    <sys:String x:Key="page_tradeRecord_refresh">刷新</sys:String>
+    <sys:String x:Key="page_tradeRecord_amount">金额（WDG)</sys:String>
+
+    <sys:String x:Key="template_senditeminfo_tb_all">全部</sys:String>
+
+    <sys:String x:Key="page_tradefee">交易费用</sys:String>
+    <sys:String x:Key="page_fee_tbk_recommended">推荐：0.001 WDG / kb</sys:String>
+    <sys:String x:Key="page_fee_tbk_sureTimeGoal">确定时间目标</sys:String>
+    <sys:String x:Key="page_fee_txb_customer">自定义</sys:String>
+    <sys:String x:Key="page_fee_rb_prompt">只支付必要费用0.00001024 WDG / kb（选择此选项请看提示）</sys:String>
+    <sys:String x:Key="page_fee_txb_prompt">如果选择此选项，交易量小时允许只支付最小交易费。交易量大到超出网络可处理时您的交易可能永远无法确认。</sys:String>
+
+
+    <sys:String x:Key="send">付款</sys:String>
+    <sys:String x:Key="generate">挖矿所得</sys:String>
+    <sys:String x:Key="receive">收款</sys:String>
+    <sys:String x:Key="self">给自己</sys:String>
+
+
+    <sys:String x:Key="converter_unconfirmed">未确认</sys:String>
+    <sys:String x:Key="converter_confirmed">完成</sys:String>
+    <sys:String x:Key="converter_confirming">确认中</sys:String>
+    <sys:String x:Key="converter_confirmFormat">确认次数</sys:String>
+    <sys:String x:Key="converter_disabled">(不可用)</sys:String>
+
+    <!--TradeDetailMiningPage-->
+    <sys:String x:Key="TradeDetailMiningPage_title">交易详情－挖矿所得</sys:String>
+    <sys:String x:Key="TradeDetailSendPage_title">交易详情－发送</sys:String>
+    <sys:String x:Key="TradeDetailReceivePage_title">交易详情－接收</sys:String>
+    <sys:String x:Key="tradeStatus">交易状态：</sys:String>
+    <sys:String x:Key="tradeCategroy">交易类型：</sys:String>
+    <sys:String x:Key="tradeDate">日期：</sys:String>
+    <sys:String x:Key="tradeAmount">交易金额：</sys:String>
+    <sys:String x:Key="tradeTxid">交易ID：</sys:String>
+    <sys:String x:Key="tradeTo">到：</sys:String>
+    <sys:String x:Key="tradeAddress">地址：</sys:String>
+    <sys:String x:Key="tradefee">交易手续费：</sys:String>
+    <sys:String x:Key="tradeInAmount">到账金额：</sys:String>
+
+    <sys:String x:Key="Mark">备注</sys:String>
+    <sys:String x:Key="Amount">金额</sys:String>
+    <sys:String x:Key="tooltip_Label">标签</sys:String>
+    <sys:String x:Key="tooltip_Mark">备注信息</sys:String>
+    <sys:String x:Key="ClearAll">清空</sys:String>
+
+
+    <sys:String x:Key="Msg_Sendfailure">发送失败</sys:String>
+    <sys:String x:Key="Msg_Sendsuccess">发送成功</sys:String>
+
+    <!--RequestPayPage-->
+    <sys:String x:Key="RequestPayPage_title">请求付款</sys:String>
+    <sys:String x:Key="URL">URI</sys:String>
+    <sys:String x:Key="Address">地址</sys:String>
+    <sys:String x:Key="Tag">标签</sys:String>
+
+    <sys:String x:Key="CopyAddress">复制地址</sys:String>
+    <sys:String x:Key="CopyURL">复制URI</sys:String>
+    <sys:String x:Key="SaveImage">保存图片</sys:String>
+    <sys:String x:Key="Close">关闭</sys:String>
+
+
+    <!--InputWalletPwdPage-->
+    <sys:String x:Key="InputWalletPwdPage_title">输入钱包密码</sys:String>
+    <sys:String x:Key="InputWalletPwdPage_tooltip">请输入你的钱包密码来发送WDG到对方</sys:String>
+    <sys:String x:Key="InputWalletPwdPage_inputPwd">输入密码</sys:String>
+    <sys:String x:Key="InputWalletPwdPage_showPwd">显示密码</sys:String>
+
+    <!--AboutPage-->
+    <sys:String x:Key="AboutPage_title">关于WDG</sys:String>
+
+    <sys:String x:Key="messagePage_title_confirmPwd">确认钱包密码</sys:String>
+    <sys:String x:Key="messagePage_title_confirmPwd_cation">如果钱包密码忘记，将会失去所有的WDG</sys:String>
+    <sys:String x:Key="messagePage_title_confirmPwd_cation2">你确定要把钱包密码加密吗？</sys:String>
+
+
+    <sys:String x:Key="page_PwdSetting_EncryptedWallet">加密钱包</sys:String>
+
+    <sys:String x:Key="page_EncryptedWallet_caption1">WDG Wallet 现在要关闭，以完成加密过程。请注意，加密钱包不能完全防止入侵你电脑的恶意程序偷取钱币。</sys:String>
+    <sys:String x:Key="page_EncryptedWallet_caption2">重要：请改用新产生的有加密的钱包文件，来取代旧钱包文件的备份。为了安全性，当你开始使用新的有加密的钱包后，旧钱包文件的备份就不能再使用了。</sys:String>
+
+
+    <sys:String x:Key="page_changePwd_caption1">请输入钱包的旧密码和新密码</sys:String>
+    <sys:String x:Key="page_changePwd_oldPwd">旧密码</sys:String>
+    <sys:String x:Key="page_changePwd_okCaption">密码修改成功</sys:String>
+
+
+    <sys:String x:Key="config_File">文件(F)</sys:String>
+    <sys:String x:Key="config_openUri">打开URI</sys:String>
+    <sys:String x:Key="config_backupWallet">备份钱包</sys:String>
+
+    <sys:String x:Key="config_setting">设置(S)</sys:String>
+    <sys:String x:Key="config_encryptWallet">加密钱包</sys:String>
+    <sys:String x:Key="config_changePwd">密码更改</sys:String>
+    <sys:String x:Key="config_option">选项</sys:String>
+
+    <sys:String x:Key="config_help">帮助(H)</sys:String>
+    <sys:String x:Key="config_aboutFiiicoin">关于WDG</sys:String>
+
+    <sys:String x:Key="config_overview">概况(O)</sys:String>
+    <sys:String x:Key="config_Send">发送(S)</sys:String>
+    <sys:String x:Key="config_receive">接收(R)</sys:String>
+    <sys:String x:Key="config_transactions">交易记录(T)</sys:String>
+
+    <sys:String x:Key="config_overview_tooltip">显示钱包概况</sys:String>
+    <sys:String x:Key="config_Send_tooltip">发送WDG 到WDG 地址</sys:String>
+    <sys:String x:Key="config_receive_tooltip">请求支付(生成二维码和WDG:URI)</sys:String>
+    <sys:String x:Key="config_transactions_tooltip">查看交易历史</sys:String>
+
+
+    <sys:String x:Key="TimeGoalItems1">2 minute（s） 2个块</sys:String>
+    <sys:String x:Key="TimeGoalItems2">4 minute（s） 4个块</sys:String>
+    <sys:String x:Key="TimeGoalItems3">6 minute（s） 6个块</sys:String>
+    <sys:String x:Key="TimeGoalItems4">12 minute（s） 12个块</sys:String>
+    <sys:String x:Key="TimeGoalItems5">24 minute（s） 24个块</sys:String>
+    <sys:String x:Key="TimeGoalItems6">48 minute（s） 48个块</sys:String>
+    <sys:String x:Key="TimeGoalItems7">2.4 hour（s） 144个块</sys:String>
+
+    <sys:String x:Key="Version_T">版本：</sys:String>
+    <sys:String x:Key="WalletLoading">正在加载钱包，请耐心等候...</sys:String>
+    <sys:String x:Key="ServiceStarting">钱包服务正在启动，请耐心等候...</sys:String>
+    <sys:String x:Key="NetConnectting">正在连接远程节点，请耐心等候...</sys:String>
+
+    <sys:String x:Key="SyncProgress">同步进度</sys:String>
+    <sys:String x:Key="synchronizing">正在同步</sys:String>
+    <sys:String x:Key="remainingblocksCount">剩余区块数量</sys:String>
+    <sys:String x:Key="stratDataTime">开始更新时间</sys:String>
+    <sys:String x:Key="Rate">进度</sys:String>
+    <sys:String x:Key="STRS">剩余同步时间</sys:String>
+
+    <sys:String x:Key="ConfirmSendTitle">确认发送</sys:String>
+    <sys:String x:Key="ConfirmSend">确认发送？</sys:String>
+    <sys:String x:Key="ToLable">到标签</sys:String>
+
+    <sys:String x:Key="SendAddress">发送地址</sys:String>
+    <sys:String x:Key="ReceiveAddress">接收地址</sys:String>
+
+    <sys:String x:Key="PayAddress">付款地址</sys:String>
+    <sys:String x:Key="PayAddressT">此地址为你要付款的地址，付款之前，请务必检查地址是否正确。</sys:String>
+    <sys:String x:Key="Create">新建</sys:String>
+    <sys:String x:Key="CopyLabel">复制标签</sys:String>
+    <sys:String x:Key="Delete">删除</sys:String>
+    <sys:String x:Key="Edit">编辑</sys:String>
+    <sys:String x:Key="Choose">选择</sys:String>
+
+    <sys:String x:Key="CreatePayUrl">新建付款地址</sys:String>
+    <sys:String x:Key="EditPayUrl">编辑付款地址</sys:String>
+    <sys:String x:Key="AddressWartMark">请输入一个WDG地址</sys:String>
+    <sys:String x:Key="template_senditeminfo_tb_rule">交易费用将从发送总额中扣除，接受人将收到比你金额输入框输入得更少得WDG</sys:String>
+
+    <sys:String x:Key="config_RestoreWallet">还原钱包</sys:String>
+    <sys:String x:Key="encryptSucceed">加密成功</sys:String>
+    <sys:String x:Key="encryptFail">加密失败</sys:String>
+
+    <sys:String x:Key="Error_NotNull">不能为空！</sys:String>
+    <sys:String x:Key="Error_Password">密码请用8-30位随机字符，并且是至少两种以上不同字符</sys:String>
+    <sys:String x:Key="Error_PasswordDifferent">前后密码输入不一致</sys:String>
+    <sys:String x:Key="Error_NewPasswordDifferent">新密码和旧密码不能一样</sys:String>
+
+    <sys:String x:Key="exportSucesses">导出成功</sys:String>
+    <sys:String x:Key="exportFail">导出失败</sys:String>
+
+    <sys:String x:Key="backupSucesses">备份成功</sys:String>
+    <sys:String x:Key="backupFail">备份失败</sys:String>
+
+    <sys:String x:Key="enterPwd_fail">密码输入错误</sys:String>
+    <sys:String x:Key="importSucesses">导入成功</sys:String>
+    <sys:String x:Key="importFail">导入失败</sys:String>
+
+
+    <sys:String x:Key="CreateByReceive">添加收款地址</sys:String>
+    <sys:String x:Key="EditByReceive">编辑收款地址</sys:String>
+
+    <sys:String x:Key="addSucesses">添加成功</sys:String>
+    <sys:String x:Key="addFail">添加失败</sys:String>
+    <sys:String x:Key="DeleteFail">删除失败</sys:String>
+
+    <sys:String x:Key="Error_Address">无效的付款地址</sys:String>
+    <sys:String x:Key="Error_Amount">无效的付款金额</sys:String>
+    <sys:String x:Key="Error_Sync">请等待区块同步完成</sys:String>
+    <sys:String x:Key="Error_OutofRange">超出范围</sys:String>
+    <sys:String x:Key="IsContainFee">包含交易费</sys:String>
+
+    <sys:String x:Key="netTooltipFormat">{0} active connection(s) to WDG network {1}点击禁止网络活动</sys:String>
+
+    <sys:String x:Key="page_changePwd_FailCaption">密码修改失败</sys:String>
+
+    <sys:String x:Key="Error_Send_OverMax">转账总额不能大于可用余额</sys:String>
+    <sys:String x:Key="Error_Send_OverMinFee">转账金额不能小于交易费</sys:String>
+
+    <sys:String x:Key="Error_Search_Address">地址搜索</sys:String>
+    <sys:String x:Key="Error_Search_Amount">发送金额</sys:String>
+
+    <sys:String x:Key="Error_Uri">输入URI格式不正确</sys:String>
+    <sys:String x:Key="days">天</sys:String>
+    <sys:String x:Key="hours">时</sys:String>
+    <sys:String x:Key="minutes">分</sys:String>
+    <sys:String x:Key="seconds">秒</sys:String>
+
+    <sys:String x:Key="Export">导出</sys:String>
+    <sys:String x:Key="ReceiveAddressT">这些都是你用来收款的WDG地址，建议每次交易用新的收款地址</sys:String>
+    <sys:String x:Key="Error_EmptyTag">标签为空</sys:String>
+    <sys:String x:Key="myself">自己</sys:String>
+    <sys:String x:Key="shadow">隐藏</sys:String>
+    <sys:String x:Key="lastDataTime">上一次数据时间</sys:String>
+    <sys:String x:Key="Error_enterOldPwd">输入旧密码不正确</sys:String>
+    <sys:String x:Key="Error_NoNet">未检测到网络</sys:String>
+    <sys:String x:Key="Error_Date">输入日期格式不正确</sys:String>
+
+    <sys:String x:Key="CopyAmount">复制金额</sys:String>
+    <sys:String x:Key="CopyTxId">复制交易ID</sys:String>
+    <sys:String x:Key="addressExisted">钱包地址已存在</sys:String>
+    <sys:String x:Key="Error_Edit">编辑失败</sys:String>
+    <sys:String x:Key="Error_TradeAmount">不包含交易费时转账金额和交易费用之和不能大于可使用余额，包含交易费时转账金额不能小于交易费</sys:String>
+
+
+    <sys:String x:Key="Import_caption1">WDG钱包现在需要关闭，已完成还原</sys:String>
+    <sys:String x:Key="Import_caption2">钱包还原后必须关闭重启才能正常使用</sys:String>
+
+    <sys:String x:Key="Closing_caption1">正在关闭WDG钱包</sys:String>
+    <sys:String x:Key="Closing_caption2">此窗口关闭前不要关闭计算机</sys:String>
+
+    <sys:String x:Key="init_caption1">快捷支付、环保低功耗</sys:String>
+    <sys:String x:Key="init_caption2">授权容量证明共识算法</sys:String>
+
+    <sys:String x:Key="UpdateMsg">WDG已经更新，请去 https://github.com/WinCoinX/WinCoinX/releases 下载最新版</sys:String>
+
+    <sys:String x:Key="setting_locktime">解锁时间</sys:String>
+    <sys:String x:Key="setting_chooesUTXO">选择UTXO</sys:String>
+    <sys:String x:Key="setting_chooesChooseAddress">选择找零地址</sys:String>
+    <sys:String x:Key="setting_isenable">是否启用</sys:String>
+    
+    <sys:String x:Key="Choose_Chg_AddrPage">选择找零地址</sys:String>
+    <sys:String x:Key="Choose_Utxo_Page">选择UTXO</sys:String>
+    <sys:String x:Key="Choose_Chg_Addr_ToolTip">用标签或者地址来进行筛选</sys:String>
+
+    <sys:String x:Key="CurrentPageFormat">第{0}页</sys:String>
+    <sys:String x:Key="TotalPageFormat">共{0}页</sys:String>
+    <sys:String x:Key="TotalCountFormat">共{0}条数据</sys:String>
+
+    <!--<sys:String x:Key="behind">落后 {0} </sys:String>
+    <sys:String x:Key="yearsBehind">{0}年</sys:String>
+    <sys:String x:Key="monthsBehind">{0}月</sys:String>
+    <sys:String x:Key="weeksBehind">{0}周</sys:String>
+    <sys:String x:Key="daysBehind">{0}天</sys:String>
+    <sys:String x:Key="hoursBehind">{0} 时</sys:String>-->
+    <sys:String x:Key="behind">落后{0}</sys:String>
+    <sys:String x:Key="yearsBehind">{0} 年</sys:String>
+    <sys:String x:Key="monthsBehind">{0} 月</sys:String>
+    <sys:String x:Key="weeksBehind">{0} 周</sys:String>
+    <sys:String x:Key="daysBehind">{0} 天</sys:String>
+    <sys:String x:Key="hoursBehind">{0} 小时</sys:String>
+    <sys:String x:Key="minutesBehind">{0} 分</sys:String>
+    <sys:String x:Key="secondsBehind">{0} 秒</sys:String>
+
+    <sys:String x:Key="Error_Utxo">选择的UTXO余额不足</sys:String>
+
+    <sys:String x:Key="MinAmount">最小金额</sys:String>
+    <sys:String x:Key="MaxAmount">最大金额</sys:String>
+    <sys:String x:Key="Search">搜索</sys:String>
+
+    <sys:String x:Key="RefreshFormat">刷新({0})</sys:String>
+    <sys:String x:Key="EnableSendSetting">开启发送设置</sys:String>
+    <sys:String x:Key="Error_Fee">手续费错误</sys:String>
+</ResourceDictionary>

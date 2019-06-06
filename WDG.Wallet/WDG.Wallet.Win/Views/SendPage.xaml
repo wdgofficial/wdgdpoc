@@ -1,0 +1,81 @@
+﻿<Page x:Class="WDG.Wallet.Win.Views.SendPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels"
+      xmlns:customcontrols="clr-namespace:WDG.Wallet.Win.CustomControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1024"
+      Title="SendPage">
+    <Page.DataContext>
+        <vm:SendViewModel/>
+    </Page.DataContext>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="items" ItemsSource="{Binding SendItems}" ItemTemplate="{StaticResource SendItemInfoDataTemplate}"/>
+        </ScrollViewer>
+        
+        <Border Grid.Row="1" Margin="30" Height="50" Background="#F0FAFF" BorderBrush="#E2F2FA" BorderThickness="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{DynamicResource Title_Tradefee}" VerticalAlignment="Center" Margin="20 0 0 0"/>
+                <TextBlock Text="{Binding Fee,StringFormat={}{0:N8} WDG/kb}" VerticalAlignment="Center" Margin="20 0 0 0"/>
+                <Button Content="{DynamicResource Btn_Chose}" VerticalAlignment="Center" 
+                        Margin="50 0 0 0" Command="{Binding ChoseFeeCommand}"
+                        Width="80" Height="28" Background="#3B8EFF" Foreground="White"/>
+
+                <!--<CheckBox Margin="80 0 0 0" Content="{DynamicResource EnableSendSetting}" 
+                          DataContext="{x:Static vm:StaticViewModel.GlobalViewModel}"
+                          Visibility="{Binding IsProfessional,Converter={StaticResource _booleanToVisibilityConverter}}"
+                          IsChecked="{Binding ProfessionalSetting.IsEnable,Mode=TwoWay}"
+                          VerticalAlignment="Center"/>-->
+
+                <Button Content="{DynamicResource Btn_SendSetting}" 
+                        DataContext="{x:Static vm:StaticViewModel.GlobalViewModel}"
+                        VerticalAlignment="Center" 
+                        Visibility="{Binding IsProfessional,Converter={StaticResource _booleanToVisibilityConverter}}"
+                        Margin="50 0 0 0" Command="{Binding SendSettingCommand}"
+                        MinWidth="80" Width="Auto" Height="28" Background="#3B8EFF" Foreground="White"/>
+            </StackPanel>
+
+        </Border>
+
+        <Border Grid.Row="2" Margin="5 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Margin="30 5">
+                    <customcontrols:PathButton
+                        PathData="{StaticResource path_btn_send}" 
+                        Padding="6" MinWidth="100" Width="Auto"
+                        DefaultFillBrush="{StaticResource btn_normal_ContentColor}"
+                        MouseOverBrush="{StaticResource btn_mouseOver_ContentColor}"
+                        IsPressedBrush="{StaticResource btn_enable_ContentColor}"
+                        IsEnabledBrush="{StaticResource btn_enable_ContentColor}"
+                        Command="{Binding SendCommand}" Content="{DynamicResource Btn_Send}" 
+                        CommandParameter="{Binding ElementName=items}" Margin="0 0 10 0" Height="34" Background="#3B8EFF" Foreground="White"/>
+                    <Button Command="{Binding ClearCommand}"
+                            BorderBrush="#D8D8D8" BorderThickness="1"
+                            Content="{DynamicResource ClearAll}" Margin="0 0 10 0" Height="34" MinWidth="100" Width="Auto"
+                            Background="#F9F9F9" Foreground="#8A8A8A"/>
+                    <Button Command="{Binding AddCommand}" Content="{DynamicResource Btn_AddPayee}" 
+                            BorderBrush="#D8D8D8" BorderThickness="1" MinWidth="100" Width="Auto"
+                            IsEnabled="{Binding SendItems,Converter={StaticResource _listCountToEnableConverter},ConverterParameter=20}" 
+                            Margin="0 0 10 0" Height="34" Background="#F9F9F9" Foreground="#8A8A8A"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1 " Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 30 0">
+                    <TextBlock Text="{DynamicResource Title_Over1}" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding OverMoney,Converter={StaticResource _longToDoubleConverter},StringFormat={}{0} WDG}" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

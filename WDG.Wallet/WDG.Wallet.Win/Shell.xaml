@@ -1,0 +1,95 @@
+﻿<blankWindow:BlankWindow x:Class="WDG.Wallet.Win.Shell"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:blankWindow="http://GFramework.org"
+                         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                         xmlns:controls="clr-namespace:WDG.Wallet.Win.CustomControls"
+                         xmlns:vm="clr-namespace:WDG.Wallet.Win.ViewModels"
+                         xmlns:customers="clr-namespace:WDG.Wallet.Win.CustomControls.Waittings"
+                         mc:Ignorable="d" Background="White" WindowStartupLocation="CenterScreen"
+                         Title="{DynamicResource Main_Title}" MinHeight="720" MinWidth="1000" Height="720" Width="900">
+    <blankWindow:BlankWindow.DataContext>
+        <vm:ShellViewModel/>
+    </blankWindow:BlankWindow.DataContext>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding WindowCommand}" CommandParameter="OnLoaded"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#F5F5F5" Height="30" blankWindow:BlankWindow.Draggable="True">
+            <Menu Grid.Row="0"
+                  Visibility="{Binding IsIniting,Converter={StaticResource _booleanToVisibilityConverter},ConverterParameter='Reverse'}"
+                  Height="30" Width="Auto"
+                  Margin="15 0 0 0"
+                  Background="Transparent"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Left"
+                  UsesItemContainerTemplate="True"
+                  VerticalContentAlignment="Center"
+                  ItemContainerTemplateSelector="{StaticResource _menuItemContainerTemplateSelector}"
+                  ItemsSource="{Binding MenuItems}">
+            </Menu>
+
+            <Border VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Visibility="{Binding IsIniting,Converter={StaticResource _booleanToVisibilityConverter},ConverterParameter='Reverse'}"
+                    >
+                <TextBlock Text="Testnet"  Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Visibility="{Binding IsTestNet,Converter={StaticResource _booleanToVisibilityConverter}}"
+                        Margin="0" FontWeight="Bold"/>
+            </Border>
+
+            <StackPanel Margin="20 0 0 0" Orientation="Horizontal" HorizontalAlignment="Left" Visibility="{Binding IsIniting,Converter={StaticResource _booleanToVisibilityConverter}}">
+                <TextBlock Text="{DynamicResource Main_Title}"  Width="Auto"
+                       VerticalAlignment="Center"/>
+                <TextBlock Text="(Testnet)"  Width="Auto"
+                       Visibility="{Binding IsTestNet,Converter={StaticResource _booleanToVisibilityConverter}}"
+                       VerticalAlignment="Center" Margin="5 0 0 0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <controls:ImageButton Width="30" Height="30" Source="images/windows/window_min.png" Background="Transparent" Command="{Binding WindowCommand}" CommandParameter="Min"/>
+                <controls:ImageButton Width="30" Height="30" Source="images/windows/window_max.png" Background="Transparent" Command="{Binding WindowCommand}" CommandParameter="Max"/>
+                <controls:ImageButton Width="30" Height="30" Source="images/windows/window_close.png" Background="Transparent" Command="{Binding WindowCommand}" CommandParameter="Close"/>
+            </StackPanel>
+        </Grid>
+
+        <Frame Grid.Row="1" Background="Gray" Content="{Binding ContentView}" NavigationUIVisibility="Hidden"/>
+
+        <Frame Grid.RowSpan="2" Content="{Binding PopupView}"
+               NavigationUIVisibility="Hidden" 
+               Visibility="{Binding IsShowPopupView,Converter={StaticResource _booleanToVisibilityConverter}}"/>
+
+        <Border Background="Transparent" 
+                Visibility="{Binding IsShowPopupView,Converter={StaticResource _booleanToVisibilityConverter}}"
+                blankWindow:BlankWindow.Draggable="True"/>
+
+        <Border Background="Transparent" Grid.RowSpan="2" 
+                Visibility="{Binding IsShowMessage,Converter={StaticResource _booleanToVisibilityConverter}}"/>
+
+        <Border Grid.RowSpan="2" CornerRadius="4"
+                MinWidth="240" MinHeight="120" Background="#979797" Width="Auto" Height="Auto"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Visibility="{Binding IsShowMessage,Converter={StaticResource _booleanToVisibilityConverter}}">
+            <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Margin="20" 
+                     VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+        </Border>
+
+
+        
+        <Grid Background="Gray" Grid.RowSpan="10" Grid.ColumnSpan="5" Opacity="0.2" 
+              DataContext="{x:Static vm:StaticViewModel.GlobalViewModel}" Panel.ZIndex="2"
+              Visibility="{Binding IsLoading,Converter={StaticResource _booleanToVisibilityConverter}}"/>
+        
+        <customers:FiveColumnLoading DataContext="{x:Static vm:StaticViewModel.GlobalViewModel}"
+            Grid.RowSpan="10" Grid.ColumnSpan="5" Panel.ZIndex="2"
+            Foreground="#3ca9fe"  VerticalAlignment="Center" HorizontalAlignment="Center"
+            Visibility="{Binding IsLoading,Converter={StaticResource _booleanToVisibilityConverter}}"/>
+    </Grid>
+</blankWindow:BlankWindow>

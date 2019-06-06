@@ -1,0 +1,30 @@
+时间：2019-05-29 11:01:47,363 描述：Microsoft Windows [版本 10.0.17134.765]
+(c) 2018 Microsoft Corporation。保留所有权利。
+
+G:\Grandeur\FiiiChain_WCX\FiiiCoin.Wallet\FiiiCoin.Wallet.Win\bin\Debug>netsh advfirewall firewall delete rule name="WDG" dir=in
+
+已删除 1 规则。
+确定。
+
+
+G:\Grandeur\FiiiChain_WCX\FiiiCoin.Wallet\FiiiCoin.Wallet.Win\bin\Debug>netsh advfirewall firewall add rule name = "WDG" protocol=UDP dir =in localport=20302,20312,20101,20111 action = allow&exit
+确定。
+
+ 
+时间：2019-05-29 11:01:48,926 描述：AmountMonitor Start 
+时间：2019-05-29 11:01:48,927 描述：UpdateBlocksMonitor Start 
+时间：2019-05-29 11:01:48,928 描述：GetBlockChainInfoSync Start 
+时间：2019-05-29 11:01:49,132 描述：FiiiChain.Node.dll 
+时间：2019-05-29 11:01:51,264 描述：Method(GetTxOutSetOM) Result = {  "Height": -1,  "BestBlock": null,  "Transactions": 0,  "Txouts": 0,  "Total_amount": 0} 
+时间：2019-05-29 11:01:51,264 描述：Method(GetBlockChainInfoSync) Result = {  "IsRunning": true,  "Connections": 1,  "LocalLastBlockHeight": -1,  "RemoteLatestBlockHeight": -1,  "TimeOffset": -1,  "LocalLastBlockTime": 0,  "TempBlockCount": 0} 
+时间：2019-05-29 11:01:51,264 描述：ConnectCount = 1 BlockLeft = 0 Progress = 0 StartTimeOffset = 0 beforeLocalLastBlockHeight = 0 
+时间：2019-05-29 11:01:51,305 描述：Method(GetTxSettings) Result = {  "Confirmations": 1,  "FeePerKB": 100000,  "Encrypt": false} 
+时间：2019-05-29 11:01:51,318 描述：Method(GetDefaultAccount) Result = {  "Address": "wcxmmZXP12rTvytWQQLA6SEL4q34krrKAa6sf8",  "PublicKey": "302A300506032B6570032100E952CB5BFA2C9631EAE770E72B00183B0033FC59FD6BD6A3145E8B6A6A4AB699",  "Balance": 0,  "IsDefault": true,  "WatchOnly": false,  "Tag": null} 
+时间：2019-05-29 11:01:51,324 描述：Method(GetPageAccountCategory) Result = [  {    "Address": "wcxmmZXP12rTvytWQQLA6SEL4q34krrKAa6sf8",    "PublicKey": null,    "Balance": 0,    "IsDefault": false,    "WatchOnly": false,    "Tag": null  }] 
+时间：2019-05-29 11:01:51,324 描述：Method(GetTradingMoney) Result = 0 
+时间：2019-05-29 11:01:51,972 描述：Method(GetTxSettings) Result = {  "Confirmations": 1,  "FeePerKB": 100000,  "Encrypt": false} 
+时间：2019-05-29 11:01:54,323 描述：GetBlockChainInfoSync Start 
+时间：2019-05-29 11:01:54,337 描述：Method(GetBlockChainInfoSync) Result = {  "IsRunning": true,  "Connections": 2,  "LocalLastBlockHeight": -1,  "RemoteLatestBlockHeight": -1,  "TimeOffset": -1,  "LocalLastBlockTime": 0,  "TempBlockCount": 0} 
+时间：2019-05-29 11:01:54,337 描述：ConnectCount = 2 BlockLeft = 0 Progress = 0 StartTimeOffset = 0 beforeLocalLastBlockHeight = 0 
+时间：2019-05-29 11:01:54,366 描述：Method(GetTxOutSetOM) Result = {  "Height": -1,  "BestBlock": null,  "Transactions": 0,  "Txouts": 0,  "Total_amount": 0} 
+时间：2019-05-29 11:01:54,373 描述：Method(GetTradingMoney) Result = 0 

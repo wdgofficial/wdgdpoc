@@ -1,0 +1,15 @@
+<Application x:Class="WDG.Wallet.Win.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/lang/zh_cn.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/CustomControls/Waittings/FiveColumnLoading.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/CustomControls/Waittings/IconLoadingStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/CustomControls/Waittings/CirclePointRingLoadingStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WDG.Wallet.Win;component/resources/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
